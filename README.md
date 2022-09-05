@@ -1,9 +1,1 @@
-[![Build Status](https://travis-ci.com/rstudio/bookdown-demo.svg?branch=master)](https://travis-ci.com/rstudio/bookdown-demo)
-
-This is a minimal example of a book based on R Markdown and **bookdown** (https://github.com/rstudio/bookdown). Please see the page "[Get Started](https://bookdown.org/yihui/bookdown/get-started.html)" at https://bookdown.org/yihui/bookdown/ for how to compile this example into HTML. You may generate a copy of the book in `bookdown::pdf_book` format by calling `bookdown::render_book('index.Rmd', 'bookdown::pdf_book')`. More detailed instructions are available here https://bookdown.org/yihui/bookdown/build-the-book.html.
-
-You can find the preview of this example at https://bookdown.org/yihui/bookdown-demo/.
-
-Max was here
-
-Udated KS 8/5/2022
+This is the Bookdown for the Body Advocacy Movement Project from the EMBARK lab. The bookdown contains a narrative document to orient readers to the study. For all code related to scoring the measures collected in the project, see the [bam-scorekeep](https://github.com/embark-lab/bam-scorekeep) repository, which houses this code.
