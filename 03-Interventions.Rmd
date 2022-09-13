@@ -10,6 +10,6 @@ BAM leverages both dissonance and exposure-based intervention strategies, adapti
 We will employ a peer-facilitated model of group intervention in this program, where a small group of 6-10 facilitators will undergo an 8-hour training program, similar to @sticeClinicianLedPeerLedInternetDelivered2017. Peer facilitators will train in teams – each peer-leader team will role-play delivery of the entire intervention and observed other peer leaders teams do the same, receiving live clinical supervision. 
 
 
-##Intervention Fidelity.
+## Intervention Fidelity.
 Sessions will be audio recorded and reviewed by two members of research staff. Audio recorded sessions will be rated for fidelity and competence. Research staff will independently code a randomly selected sample of 50% of sessions for implementation fidelity and facilitator competence using checklists assessing the major exercises and discussion topics for each session. Each component will be rated for degree of accurate presentation (10-point scale from “No adherence; the section was skipped” to “Perfect; all material in the section was presented as written”). Facilitator competence will be rated using 12 items assessing indicators of competence (e.g., leaders express ideas clearly and at an appropriate pace, leaders attempt to allot equal speaking time for all members) on a 10-point scale. 
 
