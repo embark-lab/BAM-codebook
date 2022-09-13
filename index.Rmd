@@ -13,7 +13,7 @@ description: "This is a package which contains study information, measures, and 
 ---
 # Study Premise
 
-The Body Advocacy Movement Study (Phase 1: 2021-2023) is a pilot study investigating the feasiblility, acceptability, and preliminary efficacy of an eating disorder risk reduction intervention developed by the EMBARK lab in 2020.  
+The Body Advocacy Movement Study (Phase 1: 2021-2023) is a pilot study investigating the feasibility, acceptability, and preliminary efficacy of an eating disorder risk reduction intervention developed by the EMBARK lab in 2020.  
 
 While existing, dissonance programs (i.e. the Body Project) target reductions in thin-ideal internalization, fears related to fatness and weight gain may be a particularly salient cognitive target among those with current or past eating disorder symptomatology [@levinsonAddressingFearFat2014]. In an effort to mitigate risk for ED onset and relapse among high-risk young adults (i.e. those in ED partial- or full-remission and/or those with ongoing subthreshold ED symptoms), the current project includes development and initial evaluation of a novel, peer-led intervention that focuses specifically on fear of fatness and anti-fat bias (the Body Advocacy Movement; BAM). 
 
