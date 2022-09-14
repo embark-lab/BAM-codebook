@@ -3,38 +3,52 @@
 Self-report measures are scored via the `scorekeeper` R package, and scoresheets for all measures are available [here](https://github.com/embark-lab/bam-scorekeep/tree/main/scoresheets). You can replicate scoring procedures for a given measure by runnning the scorekeep function with raw data that matches charachteristics of the raw data outlined in each scoresheet. Below is information on measures included in this project and soring procedures employed. 
 
 ## Childhood Trauma Questionnaire
-### Background 
+The Childhood Trauma Questionnaire (CTQ) is a standardized self-report inventory that measures the severity of childhood trauma and participants’ tendency to underreport maltreatment, and has been validated in both clinical and non-clinical populations [@bernsteinValidityChildhoodTrauma1997; @villanoPsychometricUtilityChildhood2004]. The CTQ is a retrospective 28-item self-report inventory that measures the severity of different types of childhood trauma, producing five clinical subscales each comprised of five items: Emotional Abuse, Physical Abuse, Sexual Abuse, Emotional Neglect, Physical Neglect. The measure also includes a three-item Minimization/Denial scale indicating the potential underreporting of maltreatment. Participants respond to each item in the context of “when you were growing up” and answer according to a five-point Likert scale ranging from “never” = 1 to “very often” = 5, producing scores of 5 to 25 for each trauma subscale. The three items comprising the Minimization/Denial scale are dichotomized (“never” = 0, all other responses = 1) and summed; a total of one (1) or greater suggests the possible underreporting of maltreatment (false negatives).
+
 ### Scoring 
+Scoring for the CTQ includes: 
+
+1. Renaming variables with descriptive names
+
+2. Creating sum scores for each subscale (5 items for each of the 5 subscales)
+
+3. Dichotomizing items for the minimization scale
+
+4. Summing dichotimized items to create the minimization score
+
 ### Key Variables
+Key summary variables from the CTQ include: 
+`ctq_emo_abuse` (CTQ emotional abuse subscale sum)
+
+`ctq_phys_abuse` (CTQ pysical abuse subscale sum)
+
+`ctq_sex_abuse` (CTQ sexual abuse subscale sum)
+
+`ctq_emo_neglect`(CTQ emotional neglect subscale sum )
+
+`ctq_phys_neglect`(CTQ physical neglect subscale sum)
+
+`ctq_minimize` (CTQ mimnimization score)
 
 ## Demographics
-### Background 
-### Scoring 
-### Key Variables
-
-## Childhood Trauma Questionnaire
-### Background 
 ### Scoring 
 ### Key Variables
 
 ## ED History Questionnaire
-### Background 
 ### Scoring 
 ### Key Variables
 
 ## ED100k
-### Background 
 ### Scoring 
 ### Key Variables
 
 ## ED Fear Questionnaire
-### Background 
 ### Scoring 
 ### Key Variables
 
 
 ## Eating Pathology Symptom Inventory 
-### Background
+
 We used the 45-item Eating Pathology Symptom Inventory (EPSI; [@forbushDevelopmentValidationEating2013]) to assess eating disorder symptoms at pre-intervention, post-intervention, and 8-week follow-up. The EPSI has been validated in clinical, college, and community samples, with 7-8 subscales in various populations, with the 8-subscale version being the most commonly-employed version of the measure [@coniglioFactorialIntegrityValidation2018]. The 8 subscales includ: Body Dissatisfaction, Binge Eating, Cognitive Restraint, Purging, Restricting, Excessive Exercise, Negative Attitudes toward Obesity, and Muscle Building. Each item is scored on a 5-point Likert-style scale (0 = Never; 4= Often) to describe how well each item describes the participant experiences. Scores are derived by summing responses across the questions included in each subscale.
 
 ### Scoring
@@ -68,7 +82,7 @@ The variables below are sum of different subscales. **Sum variables exclude thos
 `epsi_muscle_building` (reflects participant's muscle building symptoms)
 
 ## Fat Phobia Scale - Short Form 
-### Background
+
 The shortened Fat Phobia Scale (FPS)  utilizes 14 questions to assess fatphobia (from the 50-item original scale). It is intended to measure fat phobia levels in the tested population through various personality traits and whether there is bias when people apply them to an overweight person (@baconFatPhobiaScale2001). The shortened FPS questionnaire demonstrates high reliability when compared to the original 50 question scale. The FPS uses a 5-point sliding scale with 1 being equal to a different negative descriptive variable for each respective question and 5 being equal to a different positive variable for each respective question. Some items are reverse scored prior to data aggregation such that th 1 (negative) to 5 (positive) valuation is maintained across the scale.
 
 ### Scoring
@@ -83,48 +97,38 @@ In order to clean the data, the scoresheet:
 
 
 ## Food Security Questionnaire
-### Background 
 ### Scoring 
 ### Key Variables
 
-
 ## GAD-7
-### Background 
 ### Scoring 
 ### Key Variables
 
 
 ## Goldfarb Fear of Fat Scale
-### Background 
 ### Scoring 
 ### Key Variables
 
 ## Ideal Body Stereotype Scale - Revised
-### Background 
 ### Scoring 
 ### Key Variables
 
 ## PHQ-9
-### Background 
 ### Scoring 
 ### Key Variables
 
 ## Sociocultural Attitudes Towards Appearance Questionnaire
-### Background 
 ### Scoring 
 ### Key Variables
 
 ## Traditional Masculinity-Femininity Scale
-### Background 
 ### Scoring 
 ### Key Variables
 
 ## Universal Measure of Bias - Fat
-### Background 
 ### Scoring 
 ### Key Variables
 
 ## Weight and Dieting History Questionnaire
-### Background 
 ### Scoring 
 ### Key Variables
