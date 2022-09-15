@@ -18,17 +18,27 @@ Scoring for the CTQ includes:
 
 ### Key Variables
 Key summary variables from the CTQ include: 
-`ctq_emo_abuse` (CTQ emotional abuse subscale sum)
+`ctq_emo_abuse_complete` (CTQ emotional abuse subscale sum - completers only)
+`ctq_emo_abuse_NAs` (number of NA items in the subscale)
+`ctq_emo_abuse_weighted_sum` (CTQ weighted sum of scores contributing to the emotional abuse subscale)
 
-`ctq_phys_abuse` (CTQ pysical abuse subscale sum)
+`ctq_phys_abuse_complete` (CTQ pysical abuse subscale sum - completers only)
+`ctq_phys_abuse_NAs` (number of NA items in the subscale)
+`ctq_phys_abuse_weighted_sum` (CTQ weighted sum of scores contributing to the emotional abuse subscale)
 
-`ctq_sex_abuse` (CTQ sexual abuse subscale sum)
+`ctq_sex_abuse_complete` (CTQ sexual abuse subscale sum - completers only)
+`ctq_sex_abuse_NAs` (number of NA items in the subscale)
+`ctq_sex_abuse_weighted_sum` (CTQ weighted sum of scores contributing to the sexual abuse subscale)
 
-`ctq_emo_neglect`(CTQ emotional neglect subscale sum )
+`ctq_emo_neglect_complete`(CTQ emotional neglect subscale sum - completers only)
+`ctq_emo_neglect_NAs` (number of NA items in the subscale)
+`ctq_emo_neglect_weighted_sum` (CTQ weighted sum of scores contributing to the emotional neglect subscale)
 
-`ctq_phys_neglect`(CTQ physical neglect subscale sum)
+`ctq_phys_neglect_complete`(CTQ physical neglect subscale sum - completers only)
+`ctq_phys_neglect_NAs` (number of NA items in the subscale)
+`ctq_phys_neglect_weighted_sum` (CTQ weighted sum of scores contributing to the emotional neglect subscale)
 
-`ctq_minimize` (CTQ mimnimization score)
+`ctq_minimize` (CTQ minimization score - completers only)
 
 ## Demographics
 ### Scoring 
