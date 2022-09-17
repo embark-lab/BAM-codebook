@@ -109,27 +109,47 @@
 <span class="header-section-number">5.1.2</span> Key Variables<a class="anchor" aria-label="anchor" href="#key-variables"><i class="fas fa-link"></i></a>
 </h3>
 <p>Key summary variables from the CTQ include:
-<code>ctq_emo_abuse</code> (CTQ emotional abuse subscale sum)</p>
-<p><code>ctq_phys_abuse</code> (CTQ pysical abuse subscale sum)</p>
-<p><code>ctq_sex_abuse</code> (CTQ sexual abuse subscale sum)</p>
-<p><code>ctq_emo_neglect</code>(CTQ emotional neglect subscale sum )</p>
-<p><code>ctq_phys_neglect</code>(CTQ physical neglect subscale sum)</p>
-<p><code>ctq_minimize</code> (CTQ mimnimization score)</p>
+<code>ctq_emo_abuse_complete</code> (CTQ emotional abuse subscale sum - completers only)
+<code>ctq_emo_abuse_NAs</code> (number of NA items in the subscale)
+<code>ctq_emo_abuse_weighted_sum</code> (CTQ weighted sum of scores contributing to the emotional abuse subscale)</p>
+<p><code>ctq_phys_abuse_complete</code> (CTQ pysical abuse subscale sum - completers only)
+<code>ctq_phys_abuse_NAs</code> (number of NA items in the subscale)
+<code>ctq_phys_abuse_weighted_sum</code> (CTQ weighted sum of scores contributing to the emotional abuse subscale)</p>
+<p><code>ctq_sex_abuse_complete</code> (CTQ sexual abuse subscale sum - completers only)
+<code>ctq_sex_abuse_NAs</code> (number of NA items in the subscale)
+<code>ctq_sex_abuse_weighted_sum</code> (CTQ weighted sum of scores contributing to the sexual abuse subscale)</p>
+<p><code>ctq_emo_neglect_complete</code>(CTQ emotional neglect subscale sum - completers only)
+<code>ctq_emo_neglect_NAs</code> (number of NA items in the subscale)
+<code>ctq_emo_neglect_weighted_sum</code> (CTQ weighted sum of scores contributing to the emotional neglect subscale)</p>
+<p><code>ctq_phys_neglect_complete</code>(CTQ physical neglect subscale sum - completers only)
+<code>ctq_phys_neglect_NAs</code> (number of NA items in the subscale)
+<code>ctq_phys_neglect_weighted_sum</code> (CTQ weighted sum of scores contributing to the emotional neglect subscale)</p>
+<p><code>ctq_minimize</code> (CTQ minimization score - completers only)</p>
 </div>
 </div>
 <div id="demographics" class="section level2" number="5.2">
 <h2>
 <span class="header-section-number">5.2</span> Demographics<a class="anchor" aria-label="anchor" href="#demographics"><i class="fas fa-link"></i></a>
 </h2>
+<p>Demographics caputred in the current study include: Race, Sexual Orientation, Gender, Ethnicity, Student Status, Working Status, Current Living Situation, Assessment Date, and Birthdate.</p>
 <div id="scoring-1" class="section level3" number="5.2.1">
 <h3>
 <span class="header-section-number">5.2.1</span> Scoring<a class="anchor" aria-label="anchor" href="#scoring-1"><i class="fas fa-link"></i></a>
 </h3>
+<p>We start by cleaning and importing data from the data collection form, which captures demographic variables in this study. We select variables that are part of the data collection form (prefix ‘dcf’) and clean these variables from an original set of 61 variables down to 19 variables to be included in the master dataset.</p>
+<p>We calculate Age in years and remove birthdate (HIPPA Identifier) from the data set.</p>
+<p>We change assessment date to only capture month and year of assessment for de-identifiacation.</p>
 </div>
 <div id="key-variables-1" class="section level3" number="5.2.2">
 <h3>
 <span class="header-section-number">5.2.2</span> Key Variables<a class="anchor" aria-label="anchor" href="#key-variables-1"><i class="fas fa-link"></i></a>
 </h3>
+<p><code>age</code></p>
+<p><code>race</code></p>
+<p><code>ethnicity</code></p>
+<p><code>sex_orientation</code></p>
+<p><code>gender</code></p>
+<p><code>assessment_month</code></p>
 </div>
 </div>
 <div id="ed-history-questionnaire" class="section level2" number="5.3">
@@ -488,7 +508,7 @@
 <footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
 
   <div class="col-12 col-md-6 mt-3">
-    <p>"<strong>Body Advocacy Movement - Study Procedures and Measures</strong>" was written by Katherine Schaumberg. It was last built on 2022-09-13.</p>
+    <p>"<strong>Body Advocacy Movement - Study Procedures and Measures</strong>" was written by Katherine Schaumberg. It was last built on 2022-09-17.</p>
   </div>
 
   <div class="col-12 col-md-6 mt-3">

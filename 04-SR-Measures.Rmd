@@ -41,8 +41,27 @@ Key summary variables from the CTQ include:
 `ctq_minimize` (CTQ minimization score - completers only)
 
 ## Demographics
+Demographics caputred in the current study include: Race, Sexual Orientation, Gender, Ethnicity, Student Status, Working Status, Current Living Situation, Assessment Date, and Birthdate.  
+
 ### Scoring 
+We start by cleaning and importing data from the data collection form, which captures demographic variables in this study. We select variables that are part of the data collection form (prefix 'dcf') and clean these variables from an original set of 61 variables down to 19 variables to be included in the master dataset. 
+
+We calculate Age in years and remove birthdate (HIPPA Identifier) from the data set. 
+
+We change assessment date to only capture month and year of assessment for de-identifiacation. 
+
 ### Key Variables
+`age`
+
+`race`
+
+`ethnicity`
+
+`sex_orientation`
+
+`gender`
+
+`assessment_month`
 
 ## ED History Questionnaire
 ### Scoring 

@@ -59,11 +59,14 @@ weight-and-dieting-history-questionnaire
 scoring-15
 key-variables-15
 task-based-measures
-implicit-association-test---weight
+weight-implicit-association-test-weight-iat
 scoring-16
 key-variables-16
-weight-based-approach-avoidance-task
+weight-based-approach-avoidance-task-weight-aat
 scoring-17
+difference-score
+linear-mixed-effects-model
+drift-diffusion-modeling
 key-variables-17
 sample-description
 data-requests-and-terms-of-use
