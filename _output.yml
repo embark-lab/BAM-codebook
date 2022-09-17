@@ -6,5 +6,5 @@ bookdown::gitbook:
         <li><a href="./">BAM Codebook</a></li>
       after: |
         <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
-bookdown::bs4_book: default
+
 
