@@ -4,7 +4,7 @@
 
 Weight-IAT task data is housed in its own (long-format) data set within the study database, with keys of `subject_id` and `timepoint`. 
 
-The Weight-IAT is a validated measure of automatic, unconscious attitudes that has previously been used to evaluate implicit weight-related biases [ @phelanImplicitExplicitWeight2014] The Weight-IAT compares the accuracy of, and time required to categorize images of larger-bodied and thinner people together with positively- and negatively-valanced words. Outcomes include reaction time and percentage of correct categorizations.
+The Weight-IAT is a validated measure of automatic, unconscious attitudes that has previously been used to evaluate implicit weight-related biases [@phelanImplicitExplicitWeight2014] The Weight-IAT compares the accuracy of, and time required to categorize images of larger-bodied and thinner people together with positively- and negatively-valanced words. Outcomes include reaction time and percentage of correct categorizations.
 
 ### Scoring 
 The IAT scoring algorithm involves several steps, with a rigorous scoring procedure involving 12 specifications [@greenwaldUnderstandingUsingImplicit2003]

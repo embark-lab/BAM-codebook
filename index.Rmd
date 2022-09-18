@@ -9,9 +9,8 @@ bibliography: ['BAM-bookdown.bib']
 csl: apa-single-spaced.csl
 link-citations: true
 github-repo: embark-lab/bam-bookdown
-description: "This is a package which contains study information, measures, and complete data dictionary for the Body Advocacy Movement Study (Wave 1: 2020-2022)"
-resource_files: 
- -figs/fig1.png
+description: "This is a package which contains study information, measures, and complete data dictionary for the Body Advocacy Movement Study (Wave 1: 2021-2023)"
+
 ---
 # Study Premise
 
