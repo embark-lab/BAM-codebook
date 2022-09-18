@@ -1,5 +1,4 @@
 fig:pilot
-fig:testplot
 study-premise
 specific-aims
 procedures
