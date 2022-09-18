@@ -1,4 +1,4 @@
-fig:sample
+fig:pilot
 study-premise
 specific-aims
 procedures
