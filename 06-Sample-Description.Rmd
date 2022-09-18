@@ -5,4 +5,6 @@ In 2021, we ran a pilot version of this program (N = 29) randomizing young adult
 ```{r pilot, fig.cap="Pilot Sample 2021", out.width='90%', echo = F}
 knitr::include_graphics('figs/fig1.png')
 ```
-
+```{r testplot, fig.cap="test 1", out.width='90%', echo = F}
+knitr::include_graphics('figs/ewl_plot.png')
+```
