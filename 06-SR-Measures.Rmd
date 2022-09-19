@@ -1,7 +1,5 @@
 # Self-Report Measures
 
-Self-report measures are scored via the `scorekeeper` R package, and scoresheets for all measures are available [here](https://github.com/embark-lab/bam-scorekeep/tree/main/scoresheets). You can replicate scoring procedures for a given measure by runnning the scorekeep function with raw data that matches charachteristics of the raw data outlined in each scoresheet. Below is information on measures included in this project and soring procedures employed. 
-
 ## Childhood Trauma Questionnaire
 The Childhood Trauma Questionnaire (CTQ) is a standardized self-report inventory that measures the severity of childhood trauma and participants’ tendency to underreport maltreatment, and has been validated in both clinical and non-clinical populations [@bernsteinValidityChildhoodTrauma1997; @villanoPsychometricUtilityChildhood2004]. The CTQ is a retrospective 28-item self-report inventory that measures the severity of different types of childhood trauma, producing five clinical subscales each comprised of five items: Emotional Abuse, Physical Abuse, Sexual Abuse, Emotional Neglect, Physical Neglect. The measure also includes a three-item Minimization/Denial scale indicating the potential underreporting of maltreatment. Participants respond to each item in the context of “when you were growing up” and answer according to a five-point Likert scale ranging from “never” = 1 to “very often” = 5, producing scores of 5 to 25 for each trauma subscale. The three items comprising the Minimization/Denial scale are dichotomized (“never” = 0, all other responses = 1) and summed; a total of one (1) or greater suggests the possible underreporting of maltreatment (false negatives).
 
@@ -19,23 +17,33 @@ Scoring for the CTQ includes:
 ### Key Variables
 Key summary variables from the CTQ include: 
 `ctq_emo_abuse_complete` (CTQ emotional abuse subscale sum - completers only)
+
 `ctq_emo_abuse_NAs` (number of NA items in the subscale)
+
 `ctq_emo_abuse_weighted_sum` (CTQ weighted sum of scores contributing to the emotional abuse subscale)
 
 `ctq_phys_abuse_complete` (CTQ pysical abuse subscale sum - completers only)
+
 `ctq_phys_abuse_NAs` (number of NA items in the subscale)
+
 `ctq_phys_abuse_weighted_sum` (CTQ weighted sum of scores contributing to the emotional abuse subscale)
 
 `ctq_sex_abuse_complete` (CTQ sexual abuse subscale sum - completers only)
+
 `ctq_sex_abuse_NAs` (number of NA items in the subscale)
+
 `ctq_sex_abuse_weighted_sum` (CTQ weighted sum of scores contributing to the sexual abuse subscale)
 
 `ctq_emo_neglect_complete`(CTQ emotional neglect subscale sum - completers only)
+
 `ctq_emo_neglect_NAs` (number of NA items in the subscale)
+
 `ctq_emo_neglect_weighted_sum` (CTQ weighted sum of scores contributing to the emotional neglect subscale)
 
 `ctq_phys_neglect_complete`(CTQ physical neglect subscale sum - completers only)
+
 `ctq_phys_neglect_NAs` (number of NA items in the subscale)
+
 `ctq_phys_neglect_weighted_sum` (CTQ weighted sum of scores contributing to the emotional neglect subscale)
 
 `ctq_minimize` (CTQ minimization score - completers only)
@@ -44,20 +52,25 @@ Key summary variables from the CTQ include:
 Demographics caputred in the current study include: Race, Sexual Orientation, Gender, Ethnicity, Student Status, Working Status, Current Living Situation, Assessment Date, and Birthdate.  
 
 ### Scoring 
-We start by cleaning and importing data from the data collection form, which captures demographic variables in this study. We select variables that are part of the data collection form (prefix 'dcf') and clean these variables from an original set of 61 variables down to 19 variables to be included in the master dataset. 
+We start by cleaning and importing data from the data collection form, which captures demographic variables in this study. Data Cleaning steps include: 
 
-We calculate Age in years and remove birthdate (HIPPA Identifier) from the data set. 
+1. Selection of variables that are part of the data collection form (prefix 'dcf') and winnow variables to be included in the master dataset. 
 
-We change assessment date to only capture month and year of assessment for de-identifiacation. 
+2. Calculation of age in years and remove birthdate (HIPPA Identifier) from the data set. 
+
+3. Changing assessment date to only capture month and year of assessment for de-identification.
+
+4. Binning categorical variables to response options most appropriate for 
+
 
 ### Key Variables
-`age`
+`age` (Participant Age in Years)
 
-`race`
+`race` (Participant Race, recoded to: )
 
-`ethnicity`
+`ethnicity` 
 
-`sex_orientation`
+`sex_orientation` (Participant sexual orientation)
 
 `gender`
 
