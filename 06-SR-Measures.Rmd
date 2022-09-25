@@ -3,7 +3,8 @@
 ## Childhood Trauma Questionnaire
 The Childhood Trauma Questionnaire (CTQ) is a standardized self-report inventory that measures the severity of childhood trauma and participants’ tendency to underreport maltreatment, and has been validated in both clinical and non-clinical populations [@bernsteinValidityChildhoodTrauma1997; @villanoPsychometricUtilityChildhood2004]. The CTQ is a retrospective 28-item self-report inventory that measures the severity of different types of childhood trauma, producing five clinical subscales each comprised of five items: Emotional Abuse, Physical Abuse, Sexual Abuse, Emotional Neglect, Physical Neglect. The measure also includes a three-item Minimization/Denial scale indicating the potential underreporting of maltreatment. Participants respond to each item in the context of “when you were growing up” and answer according to a five-point Likert scale ranging from “never” = 1 to “very often” = 5, producing scores of 5 to 25 for each trauma subscale. The three items comprising the Minimization/Denial scale are dichotomized (“never” = 0, all other responses = 1) and summed; a total of one (1) or greater suggests the possible underreporting of maltreatment (false negatives).
 
-### Scoring 
+**Scoring**
+
 Scoring for the CTQ includes: 
 
 1. Renaming variables with descriptive names
@@ -14,7 +15,7 @@ Scoring for the CTQ includes:
 
 4. Summing dichotimized items to create the minimization score
 
-### Key Variables
+**Key Variables**
 Key summary variables from the CTQ include: 
 `ctq_emo_abuse_complete` (CTQ emotional abuse subscale sum - completers only)
 
@@ -51,7 +52,8 @@ Key summary variables from the CTQ include:
 ## Demographics
 Demographics caputred in the current study include: Race, Sexual Orientation, Gender, Ethnicity, Student Status, Working Status, Current Living Situation, Assessment Date, and Birthdate.  
 
-### Scoring 
+**Scoring**
+
 We start by cleaning and importing data from the data collection form, which captures demographic variables in this study. Data Cleaning steps include: 
 
 1. Selection of variables that are part of the data collection form (prefix 'dcf') and winnow variables to be included in the master dataset. 
@@ -63,7 +65,8 @@ We start by cleaning and importing data from the data collection form, which cap
 4. Binning categorical variables to response options most appropriate for 
 
 
-### Key Variables
+**Key Variables**
+
 `age` (Participant Age in Years)
 
 `race` (Participant Race, recoded to: )
@@ -77,23 +80,18 @@ We start by cleaning and importing data from the data collection form, which cap
 `assessment_month`
 
 ## ED History Questionnaire
-### Scoring 
-### Key Variables
 
 ## ED100k
-### Scoring 
-### Key Variables
+
 
 ## ED Fear Questionnaire
-### Scoring 
-### Key Variables
-
 
 ## Eating Pathology Symptom Inventory 
 
 We used the 45-item Eating Pathology Symptom Inventory (EPSI; [@forbushDevelopmentValidationEating2013]) to assess eating disorder symptoms at pre-intervention, post-intervention, and 8-week follow-up. The EPSI has been validated in clinical, college, and community samples, with 7-8 subscales in various populations, with the 8-subscale version being the most commonly-employed version of the measure [@coniglioFactorialIntegrityValidation2018]. The 8 subscales includ: Body Dissatisfaction, Binge Eating, Cognitive Restraint, Purging, Restricting, Excessive Exercise, Negative Attitudes toward Obesity, and Muscle Building. Each item is scored on a 5-point Likert-style scale (0 = Never; 4= Often) to describe how well each item describes the participant experiences. Scores are derived by summing responses across the questions included in each subscale.
 
-### Scoring
+**Scoring**
+
 To clean the data, the scoresheet:
 
 1) selects only the variables that are relevant for the current measure
@@ -104,7 +102,8 @@ To clean the data, the scoresheet:
 
 4) select only a few columns that will go into the final dataset
 
-### Key Variables
+**Key Variables**
+
 The variables below are sum of different subscales. **Sum variables exclude those who did not complete all items of a subscale**
 
 `epsi_body_dissatisfaction` (reflects participant's body dissatisfaction symptoms)
@@ -127,24 +126,75 @@ The variables below are sum of different subscales. **Sum variables exclude thos
 
 The shortened Fat Phobia Scale (FPS)  utilizes 14 questions to assess fatphobia (from the 50-item original scale). It is intended to measure fat phobia levels in the tested population through various personality traits and whether there is bias when people apply them to an overweight person (@baconFatPhobiaScale2001). The shortened FPS questionnaire demonstrates high reliability when compared to the original 50 question scale. The FPS uses a 5-point sliding scale with 1 being equal to a different negative descriptive variable for each respective question and 5 being equal to a different positive variable for each respective question. Some items are reverse scored prior to data aggregation such that th 1 (negative) to 5 (positive) valuation is maintained across the scale.
 
-### Scoring
+**Scoring**
 In order to clean the data, the scoresheet:
 
 1. Selects and renames variables to include descriptive terms from questions in the scale
 2. Codes all items such that the negative descriptor is labeled as 1 and the positive descriptor is labeled as 5
 3. Computes a mean score using all 14-items 
 
-### Key Variables
+**Key Variables**
 `fps_mean` (average of scores in response to questions asking how different negative and positive descriptors should be applied to a fat person)
 
 
 ## Food Security Questionnaire
-### Scoring 
-### Key Variables
+
+This companion file is for the Household Food Security Scale (FSQ) developed by the USDA Food and Nutrition Services (FNS) in 1995 for assessing food security within households, specifically for use in the Current Population Survey (CPS) which is run by the US Bureau of the Census (Carlson et al., 1999). One of the distinguishing factors of the FSQ is its categorical approach as it is a unidimensional scale intended to measure the severity of the food insecurity in question (Carlson et al., 1999). The FSQ demonstrates strong psychometric properties with high reliability and validity and this has been supported by historical evaluations (Engelhard Jr. et al., 2018). The FSQ uses 3 separate scales for the different types of questions: yes and no questions on a 2-point likert scale, questions with a 3 point likert scale, wherein, 2 equals never true and 0 equals often true, and questions with a 6-point likert scale where 1 equals no days and 7 equals everyday. 
+
+[Measuring Food Insecurity and Hunger in the United States: Development of a National Benchmark Measure and Prevalence Estimates](https://academic.oup.com/jn/article/129/2/510S/4731683)
+
+[Using Household Fit Indices to Examine the Psychometric Quality of Food Insecurity Measures](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6293410/)
+
+**Scoring**
+In order to clean the data:
+
+- Select raw variables being used
+
+- Rename variables to include numbering of questions in the scale and name of scale being utilized
+
+- Recode scores on 3-point likert scale so that never true is equal to 0 and often true is equal to 2
+
+- Recode scores on 6-point likert scame so that 0 equals no days and 6 equals everyday
+
+- Sum scores for questions 1, 2, 3, 4, 5, and 6 and rename `fsq_sum_access`
+
+- Average scores for questions 8, 10, 12, 14 and rename `fsq_average_duration`
+
+- Average scores for questions 7, 9, 11, and 13 and rename `fsq_yes_no`
+
+
+**Key Variables**
+
+`fsq_sum_access` (sum of scores answering questions asking about access to food and whether there was a lack of food security and whether there was concern regarding food security)
+`fsq_average_duration` (average of scores measuring how many days were impacted by previous questions with yes no scores regarding previous 28 days of access and measures taken because of food insecurity)
+`fsq_yes_no` (average of scores answering questions focused on measures taken in previous 28 responding to food insecurity)
+
 
 ## GAD-7
-### Scoring 
-### Key Variables
+
+Generalized Anxiety Disorder 7-item (GAD-7) is a seven-item instrument that is used to measure or assess the severity of generalised anxiety disorder (GAD). Each item asks the individual to rate the severity of his or her symptoms over the past two weeks. Response options include “not at all”, “several days”, “more than half the days” and “nearly every day”.
+
+GAD-7 has previously been examined and used in many different papers. Some examples are listed below:
+
+[Using Generalized Anxiety Disorder-2 (GAD-2) and GAD-7 in a Primary Care Setting](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7306644/)
+
+[A Brief Measure for Assessing Generalized Anxiety Disorder: The GAD-7](https://jamanetwork.com/journals/jamainternalmedicine/fullarticle/410326)
+
+**Scoresheet**
+
+To clean the data, the scoresheet:
+
+1) selects only the variables that are relevant for the current measure
+
+2) recode raw variables to make them consistent with the way of scoring: not at all =0, several days =1, over half the days =2, nearly every day =3
+
+3) creates an additional variable based on sum scores reflecting the participant's anxiety levels
+
+4) select only a few columns that will go into the final dataset
+
+**Key variables**
+
+`gad_sum_25` (Sum of GAD-7, 25% or less items missing and weighted by N items completed)
 
 
 ## Goldfarb Fear of Fat Scale
@@ -154,8 +204,8 @@ The Goldfarb Fear of Fat Scale (GFFS) which was introduced in 1985 as a diagnost
 [An examination of the factor structure of the Goldfarb Fear of Fat Scale in clinical and non-clinical samples of Polish women](https://www.sciencedirect.com/science/article/pii/S1740144521001467)
 [Measures for Clinical Practice and Research: A Sourcebook, 4th edition](https://www.magiworld.org/Journal/2010/1008_Measures.pdf)
 
-## Scoring 
-Scoring note - we 
+**Scoring**
+The scoresheet outlines the following steps to clean the data: 
 
 1. Select raw variables being used
 
@@ -167,9 +217,9 @@ Scoring note - we
 
 5. Create a score that is the weighted sum for those who completed at least 75% of items
 
-**NOTE** Our GFFS scoring procedure re-scales the item scores to be 0-3 instead of 1-4, meaning that sum scores are scaled 0-21 instead of 7-28. To compare our means to other studies using the GFFS, add 7 to the sum score.
+**Scoring Note** Our GFFS scoring procedure re-scales the item scores to be 0-3 instead of 1-4, meaning that sum scores are scaled 0-21 instead of 7-28. To compare our means to other studies using the GFFS, add 7 to the sum score.
 
-## 3. Key Variables
+**Key Variables**
  
 `gffs_1_fear_fat` (assesses if biggest fear is becoming fat)
 `gffs_2_fear_little_gain` (assesses fear of minor weight gain)
@@ -186,25 +236,167 @@ Scoring note - we
 
 
 ## Ideal Body Stereotype Scale - Revised
-### Scoring 
-### Key Variables
+
+This companion file is for the Ideal Body Stereotype Scale, which is designed to measure internalization of the ideal-body stereotype. It was developed as part of a study examining how the dual pathway model of bulimia predicts diagnostic levels of the disorder.The measure is an adapted form of the Ideal-Body Stereotype Scale (Stice et al., 1994). 
+
+Reference 1: ["A prospective test of the dual-pathway model of bulimic pathology: Mediting effects of dieting and negative affect.Journal of Abnormal Psychology"] (http://www.ori.org/files/Static%20Page%20Files/Stice01.pdf)
+
+**Scoresheet**
+
+In order to clean the data:
+
+(1) Selects raw variables being used for the current measure
+
+(2) Renames variables to be easily identified
+
+(3) Calculate the mean scores and rename this as idss_mean
+
+**Key Variables**
+
+"idss_slender", 
+"idss_in_shape", 
+"idss_tall", 
+"idss_lean",
+"idss_shapely", 
+"idss_long_legs", 
+"ideal_body_stereotype_scale_revised_complete"
+
+## Positive and Negative Affect Schedule (PANAS)
+
+This companion file is for the Positive and Negative Affect Schedule (PANAS) which was introduced in 1988 as a two-factor scale to measure one's positive and negative moods (Watson et al., 1988). Compared to other scales measuring positive and negative affect, PANAS has high internal consistency and validity (Watson et al., 1988). In addition, the scale also shows consistent reliabiltiy, even when measured across sexes (Crawford et al., 2004). PANAS uses a 5-point likert scale with 1 being equal to very slightly or not at all and 5 being equal to extremely. In terms of scoring, sums of scores are separated for questions regarding positive affect and questions reagrding negative affect. 
+
+
+[Development and Validation of Brief Measures of Positive and Negative Affect: The PANAS Scales](https://psycnet.apa.org/fulltext/1988-31508-001.pdf?auth_token=bfee3b8066fabebd06ab79822ba512d821684b31)
+[The Positive and Negative Affect Schedule (PANAS): Construct validity, measurement properties and normative data in a large non-clinical sample](https://bpspsychub.onlinelibrary.wiley.com/doi/pdf/10.1348/0144665031752934)
+[The Positive and Negative Affect Schedule](https://ogg.osu.edu/media/documents/MB%20Stream/PANAS.pdf)
+##
+
+**Scoresheet**
+
+In order to clean the data:
+
+- Select raw variables being used
+
+- Rename variables to include panas and numbering for order of questions in the scale 
+
+- Sum the total scores of questions 1, 3, 5, 8, 9, 11, 13, 15, 16, 18 and rename as `panas_positive_sum`
+
+- Sum the total scores of questions 2, 4, 6, 7, 10, 12, 14, 17, 19 and rename as `panas_negative_sum`
+
+**Key Variables**
+ 
+`panas_positive_sum` (sum of scores for questions identifying positive affect over the course of the last week)
+`panas_negative_sum` (sum of scores for questions identifying negative affect over the course of the last week)
+
 
 ## PHQ-9
-### Scoring 
-### Key Variables
+
+The 9-question Patient Health Questionnaire is a diagnostic tool introduced in 2001 to screen adult patients in a primary care setting for the presence and severity of depression. It rates depression based on the self-administered Patient Health Questionnaire.
+
+
+Reference 1: [Anxiety Sensitivity, Anxiety Frequency, and the Prediction of Fearfulness](https://github.com/jjcurtin/arc_measures/raw/main/ASI/ReissS1986a.pdf)
+Reference 2: [Robust Dimensions of Anxiety Sensitivty: Development and Initial Validation of the Anxiety Sensitivity Index-3](https://github.com/jjcurtin/arc_measures/raw/main/ASI3/TaylorS2007b.pdf)
+
+**Scoresheet**
+
+In order to clean the data:
+
+(1) Selects raw variables being used for the current measure
+
+(2) Recode labels scale to begin at 0 instead of 1 with "not at all" = 0, and "nearly every day" = 4
+
+(3) Sum the total scores and rename this summary as phq_sum
+
+
+**Key Variables**
+
+`phq_sum` (represents total score of the PHQ-9)
+
 
 ## Sociocultural Attitudes Towards Appearance Questionnaire
-### Scoring 
-### Key Variables
+
+This companion file is for the Sociocultural Attitudes Towards Appearance Questionnaire-4 (SATAQ) which measures designed to assess societal and interpersonal aspects of appearance ideals.(Schaefer, Lauren M et al., 2015) This experiment design has assess to an extensive evaluation among samples, which works very well. 
+
+
+Schaefer, Lauren M et al. “Development and validation of the Sociocultural Attitudes Towards Appearance Questionnaire-4 (SATAQ-4).” Psychological assessment vol. 27,1 (2015): 54-67. doi:10.1037/a0037917
+
+**Scoresheet**
+
+In order to clean the data:
+
+- Select raw variables being used
+
+- Rename variables to include numbering for order of questions in the scale
+
+- Recode labels scale to begin at 0
+
+- Generate the average score of internalization of thin/low Body Fat, internalization of muscular/athletic, pressures - family, pressures - peers, and pressures - media. 
+
+**Key Variables**
+ 
+`sataq_average`	(average of SATAQ)
+`sataq_thin_ideal`	(average of internalization of the thin ideal)
+`sataq_athletic_ideal`	(average of internalization of athletic ideal)
+`sataq_parental_pressure`	(average of parental pressure)
+`sataq_peer_pressure`	(average of peer pressure)
+`sataq_media_pressure`	(average of media pressure)
 
 ## Traditional Masculinity-Femininity Scale
-### Scoring 
-### Key Variables
+This companion file is for the Traditional Masculinity-Femininity Scale (TMFS) which was introduced in 2016 to assess self-ascribed masculinity and femininity (Kachel et al., 2016). TMFS has demonstrated high reliability for both sexes (Kachel et al., 2016). Additionally, TMFS shows validity due to its ability to reduce issues of social desirability when given as a self-assessment (Kachel et al., 2016). TMFS uses a 7-point likert scale with 1 being equal to totally masculine and 7 being equal to totally feminine. In terms of scoring, the mean is taken of all given answers with an average less than 4 implying masculinity and an average greater than 4 implying femininity.
+
+
+[Traditional Masculinity and Femininity: Validation of a New Scale Assessing Gender Roles ](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4932111/)
+
+**Scoresheet**
+
+In order to clean the data:
+
+- Select raw variables being used
+
+- Rename variables to include numbering of questions in the scale
+
+- Average the total scores and rename as `tmfs_mean`
+
+**Key Variables**
+
+`tmfs_mean` (average of scores in response to questions asking about different situations where one could consider their femininity and masculinity)
 
 ## Universal Measure of Bias - Fat
-### Scoring 
-### Key Variables
+
+This companion file is for the Universal Measure of Bias - Fat (UMB-Fat) which was introduced in 2008 to assess weight bias and demonstrates strong psychometric properties when utilized as an assessment (Durso et al., 2008). It has been compared alongside two other scales measuring universal bias against 'gay' or 'Muslim' individuals and demonstrates high internal consistency and construct validity (Latner et al., 2008). UMB-Fat uses a 7-point likert scale with 1 being equal to strongly agree and 7 being equal to strongly disagree. In terms of scoring, sums of scores are separated amongst four categories of bias: adverse judgement, social distance, attraction, and equal rights. 
+
+
+[Understanding self-directed stigma: development of the weight bias internalization scale ](https://pubmed.ncbi.nlm.nih.gov/18978768/)
+[Weighing obesity stigma: the relative strength of different forms of bias ](https://pubmed.ncbi.nlm.nih.gov/18414421/)
+[UMB-FAT](https://www.researchgate.net/publication/262414384_UMB-FAT)
+
+**Scoresheet**
+
+In order to clean the data:
+
+- Select raw variables being used
+
+- Rename variables to include descriptors of questions asked in the scale 
+
+- Reverse code questions 5, 7, 8, 9, 12, 15, 16, and 19 so that higher scores indicate greater stigma
+
+- Sum the total scores of questions 5, 7, 12 ,15 , 16  and rename as `umb_adverse_judgement_sum`
+
+- Sum the total scores of questions 2, 8, 17, 19, 20  and rename as `umb_social_distance_sum`
+
+- Sum the total scores of questions 3, 4, 6, 9, 10 and rename as `umb_attraction_sum`
+
+- Sum the total scores of questions 1, 11, 13, 14, 18 and rename as `umb_equal_rights_sum`
+
+-Total score with sum of all items as `umb_sum_total`
+
+
+**Key Variables**
+ 
+`umb_adverse_judgement_sum_25` (sum of scores for questions identifying bias in the form of adverse judgement against fat people - 25% or less missing)
+`umb_social_distance_sum_25` (sum of scores for questions identifying bias in the form of social distance from fat people - 25% or less missing)
+`umb_attraction_sum_25` (sum of scores for questions identifying bias in the form of attraction towards fat people - 25% or less missing)
+`umb_equal_rights_sum_25` (sum of scores for questions identifying bias in the form of opinons of equal rights for fat people - 25% or less missing)
+`umb_sum_total_25` (sum of total umb-FAT scores - 25% or less missing)
 
 ## Weight and Dieting History Questionnaire
-### Scoring 
-### Key Variables

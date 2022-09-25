@@ -6,14 +6,14 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <title>Chapter 5 Self-Report Measures | Body Advocacy Movement - Study Procedures and Measures</title>
 <meta name="author" content="Katherine Schaumberg">
-<meta name="description" content="Self-report measures are scored via the scorekeeper R package, and scoresheets for all measures are available here. You can replicate scoring procedures for a given measure by runnning the...">
+<meta name="description" content="5.1 Childhood Trauma Questionnaire The Childhood Trauma Questionnaire (CTQ) is a standardized self-report inventory that measures the severity of childhood trauma and participants’ tendency to...">
 <meta name="generator" content="bookdown 0.25 with bs4_book()">
 <meta property="og:title" content="Chapter 5 Self-Report Measures | Body Advocacy Movement - Study Procedures and Measures">
 <meta property="og:type" content="book">
-<meta property="og:description" content="Self-report measures are scored via the scorekeeper R package, and scoresheets for all measures are available here. You can replicate scoring procedures for a given measure by runnning the...">
+<meta property="og:description" content="5.1 Childhood Trauma Questionnaire The Childhood Trauma Questionnaire (CTQ) is a standardized self-report inventory that measures the severity of childhood trauma and participants’ tendency to...">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Chapter 5 Self-Report Measures | Body Advocacy Movement - Study Procedures and Measures">
-<meta name="twitter:description" content="Self-report measures are scored via the scorekeeper R package, and scoresheets for all measures are available here. You can replicate scoring procedures for a given measure by runnning the...">
+<meta name="twitter:description" content="5.1 Childhood Trauma Questionnaire The Childhood Trauma Questionnaire (CTQ) is a standardized self-report inventory that measures the severity of childhood trauma and participants’ tendency to...">
 <!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
 <script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.3.1/transition.js"></script><script src="libs/bs3compat-0.3.1/tabs.js"></script><script src="libs/bs3compat-0.3.1/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
@@ -86,16 +86,12 @@
 <h1>
 <span class="header-section-number">5</span> Self-Report Measures<a class="anchor" aria-label="anchor" href="#self-report-measures"><i class="fas fa-link"></i></a>
 </h1>
-<p>Self-report measures are scored via the <code>scorekeeper</code> R package, and scoresheets for all measures are available <a href="https://github.com/embark-lab/bam-scorekeep/tree/main/scoresheets">here</a>. You can replicate scoring procedures for a given measure by runnning the scorekeep function with raw data that matches charachteristics of the raw data outlined in each scoresheet. Below is information on measures included in this project and soring procedures employed.</p>
 <div id="childhood-trauma-questionnaire" class="section level2" number="5.1">
 <h2>
 <span class="header-section-number">5.1</span> Childhood Trauma Questionnaire<a class="anchor" aria-label="anchor" href="#childhood-trauma-questionnaire"><i class="fas fa-link"></i></a>
 </h2>
 <p>The Childhood Trauma Questionnaire (CTQ) is a standardized self-report inventory that measures the severity of childhood trauma and participants’ tendency to underreport maltreatment, and has been validated in both clinical and non-clinical populations <span class="citation">(<a href="references.html#ref-bernsteinValidityChildhoodTrauma1997" role="doc-biblioref">Bernstein et al., 1997</a>; <a href="references.html#ref-villanoPsychometricUtilityChildhood2004" role="doc-biblioref">Villano et al., 2004</a>)</span>. The CTQ is a retrospective 28-item self-report inventory that measures the severity of different types of childhood trauma, producing five clinical subscales each comprised of five items: Emotional Abuse, Physical Abuse, Sexual Abuse, Emotional Neglect, Physical Neglect. The measure also includes a three-item Minimization/Denial scale indicating the potential underreporting of maltreatment. Participants respond to each item in the context of “when you were growing up” and answer according to a five-point Likert scale ranging from “never” = 1 to “very often” = 5, producing scores of 5 to 25 for each trauma subscale. The three items comprising the Minimization/Denial scale are dichotomized (“never” = 0, all other responses = 1) and summed; a total of one (1) or greater suggests the possible underreporting of maltreatment (false negatives).</p>
-<div id="scoring" class="section level3" number="5.1.1">
-<h3>
-<span class="header-section-number">5.1.1</span> Scoring<a class="anchor" aria-label="anchor" href="#scoring"><i class="fas fa-link"></i></a>
-</h3>
+<p><strong>Scoring</strong></p>
 <p>Scoring for the CTQ includes:</p>
 <ol style="list-style-type: decimal">
 <li><p>Renaming variables with descriptive names</p></li>
@@ -103,109 +99,67 @@
 <li><p>Dichotomizing items for the minimization scale</p></li>
 <li><p>Summing dichotimized items to create the minimization score</p></li>
 </ol>
-</div>
-<div id="key-variables" class="section level3" number="5.1.2">
-<h3>
-<span class="header-section-number">5.1.2</span> Key Variables<a class="anchor" aria-label="anchor" href="#key-variables"><i class="fas fa-link"></i></a>
-</h3>
-<p>Key summary variables from the CTQ include:
-<code>ctq_emo_abuse_complete</code> (CTQ emotional abuse subscale sum - completers only)
-<code>ctq_emo_abuse_NAs</code> (number of NA items in the subscale)
-<code>ctq_emo_abuse_weighted_sum</code> (CTQ weighted sum of scores contributing to the emotional abuse subscale)</p>
-<p><code>ctq_phys_abuse_complete</code> (CTQ pysical abuse subscale sum - completers only)
-<code>ctq_phys_abuse_NAs</code> (number of NA items in the subscale)
-<code>ctq_phys_abuse_weighted_sum</code> (CTQ weighted sum of scores contributing to the emotional abuse subscale)</p>
-<p><code>ctq_sex_abuse_complete</code> (CTQ sexual abuse subscale sum - completers only)
-<code>ctq_sex_abuse_NAs</code> (number of NA items in the subscale)
-<code>ctq_sex_abuse_weighted_sum</code> (CTQ weighted sum of scores contributing to the sexual abuse subscale)</p>
-<p><code>ctq_emo_neglect_complete</code>(CTQ emotional neglect subscale sum - completers only)
-<code>ctq_emo_neglect_NAs</code> (number of NA items in the subscale)
-<code>ctq_emo_neglect_weighted_sum</code> (CTQ weighted sum of scores contributing to the emotional neglect subscale)</p>
-<p><code>ctq_phys_neglect_complete</code>(CTQ physical neglect subscale sum - completers only)
-<code>ctq_phys_neglect_NAs</code> (number of NA items in the subscale)
-<code>ctq_phys_neglect_weighted_sum</code> (CTQ weighted sum of scores contributing to the emotional neglect subscale)</p>
+<p><strong>Key Variables</strong>
+Key summary variables from the CTQ include:
+<code>ctq_emo_abuse_complete</code> (CTQ emotional abuse subscale sum - completers only)</p>
+<p><code>ctq_emo_abuse_NAs</code> (number of NA items in the subscale)</p>
+<p><code>ctq_emo_abuse_weighted_sum</code> (CTQ weighted sum of scores contributing to the emotional abuse subscale)</p>
+<p><code>ctq_phys_abuse_complete</code> (CTQ pysical abuse subscale sum - completers only)</p>
+<p><code>ctq_phys_abuse_NAs</code> (number of NA items in the subscale)</p>
+<p><code>ctq_phys_abuse_weighted_sum</code> (CTQ weighted sum of scores contributing to the emotional abuse subscale)</p>
+<p><code>ctq_sex_abuse_complete</code> (CTQ sexual abuse subscale sum - completers only)</p>
+<p><code>ctq_sex_abuse_NAs</code> (number of NA items in the subscale)</p>
+<p><code>ctq_sex_abuse_weighted_sum</code> (CTQ weighted sum of scores contributing to the sexual abuse subscale)</p>
+<p><code>ctq_emo_neglect_complete</code>(CTQ emotional neglect subscale sum - completers only)</p>
+<p><code>ctq_emo_neglect_NAs</code> (number of NA items in the subscale)</p>
+<p><code>ctq_emo_neglect_weighted_sum</code> (CTQ weighted sum of scores contributing to the emotional neglect subscale)</p>
+<p><code>ctq_phys_neglect_complete</code>(CTQ physical neglect subscale sum - completers only)</p>
+<p><code>ctq_phys_neglect_NAs</code> (number of NA items in the subscale)</p>
+<p><code>ctq_phys_neglect_weighted_sum</code> (CTQ weighted sum of scores contributing to the emotional neglect subscale)</p>
 <p><code>ctq_minimize</code> (CTQ minimization score - completers only)</p>
-</div>
 </div>
 <div id="demographics" class="section level2" number="5.2">
 <h2>
 <span class="header-section-number">5.2</span> Demographics<a class="anchor" aria-label="anchor" href="#demographics"><i class="fas fa-link"></i></a>
 </h2>
 <p>Demographics caputred in the current study include: Race, Sexual Orientation, Gender, Ethnicity, Student Status, Working Status, Current Living Situation, Assessment Date, and Birthdate.</p>
-<div id="scoring-1" class="section level3" number="5.2.1">
-<h3>
-<span class="header-section-number">5.2.1</span> Scoring<a class="anchor" aria-label="anchor" href="#scoring-1"><i class="fas fa-link"></i></a>
-</h3>
-<p>We start by cleaning and importing data from the data collection form, which captures demographic variables in this study. We select variables that are part of the data collection form (prefix ‘dcf’) and clean these variables from an original set of 61 variables down to 19 variables to be included in the master dataset.</p>
-<p>We calculate Age in years and remove birthdate (HIPPA Identifier) from the data set.</p>
-<p>We change assessment date to only capture month and year of assessment for de-identifiacation.</p>
-</div>
-<div id="key-variables-1" class="section level3" number="5.2.2">
-<h3>
-<span class="header-section-number">5.2.2</span> Key Variables<a class="anchor" aria-label="anchor" href="#key-variables-1"><i class="fas fa-link"></i></a>
-</h3>
-<p><code>age</code></p>
-<p><code>race</code></p>
+<p><strong>Scoring</strong></p>
+<p>We start by cleaning and importing data from the data collection form, which captures demographic variables in this study. Data Cleaning steps include:</p>
+<ol style="list-style-type: decimal">
+<li><p>Selection of variables that are part of the data collection form (prefix ‘dcf’) and winnow variables to be included in the master dataset.</p></li>
+<li><p>Calculation of age in years and remove birthdate (HIPPA Identifier) from the data set.</p></li>
+<li><p>Changing assessment date to only capture month and year of assessment for de-identification.</p></li>
+<li><p>Binning categorical variables to response options most appropriate for</p></li>
+</ol>
+<p><strong>Key Variables</strong></p>
+<p><code>age</code> (Participant Age in Years)</p>
+<p><code>race</code> (Participant Race, recoded to: )</p>
 <p><code>ethnicity</code></p>
-<p><code>sex_orientation</code></p>
+<p><code>sex_orientation</code> (Participant sexual orientation)</p>
 <p><code>gender</code></p>
 <p><code>assessment_month</code></p>
-</div>
 </div>
 <div id="ed-history-questionnaire" class="section level2" number="5.3">
 <h2>
 <span class="header-section-number">5.3</span> ED History Questionnaire<a class="anchor" aria-label="anchor" href="#ed-history-questionnaire"><i class="fas fa-link"></i></a>
 </h2>
-<div id="scoring-2" class="section level3" number="5.3.1">
-<h3>
-<span class="header-section-number">5.3.1</span> Scoring<a class="anchor" aria-label="anchor" href="#scoring-2"><i class="fas fa-link"></i></a>
-</h3>
-</div>
-<div id="key-variables-2" class="section level3" number="5.3.2">
-<h3>
-<span class="header-section-number">5.3.2</span> Key Variables<a class="anchor" aria-label="anchor" href="#key-variables-2"><i class="fas fa-link"></i></a>
-</h3>
-</div>
 </div>
 <div id="ed100k" class="section level2" number="5.4">
 <h2>
 <span class="header-section-number">5.4</span> ED100k<a class="anchor" aria-label="anchor" href="#ed100k"><i class="fas fa-link"></i></a>
 </h2>
-<div id="scoring-3" class="section level3" number="5.4.1">
-<h3>
-<span class="header-section-number">5.4.1</span> Scoring<a class="anchor" aria-label="anchor" href="#scoring-3"><i class="fas fa-link"></i></a>
-</h3>
-</div>
-<div id="key-variables-3" class="section level3" number="5.4.2">
-<h3>
-<span class="header-section-number">5.4.2</span> Key Variables<a class="anchor" aria-label="anchor" href="#key-variables-3"><i class="fas fa-link"></i></a>
-</h3>
-</div>
 </div>
 <div id="ed-fear-questionnaire" class="section level2" number="5.5">
 <h2>
 <span class="header-section-number">5.5</span> ED Fear Questionnaire<a class="anchor" aria-label="anchor" href="#ed-fear-questionnaire"><i class="fas fa-link"></i></a>
 </h2>
-<div id="scoring-4" class="section level3" number="5.5.1">
-<h3>
-<span class="header-section-number">5.5.1</span> Scoring<a class="anchor" aria-label="anchor" href="#scoring-4"><i class="fas fa-link"></i></a>
-</h3>
-</div>
-<div id="key-variables-4" class="section level3" number="5.5.2">
-<h3>
-<span class="header-section-number">5.5.2</span> Key Variables<a class="anchor" aria-label="anchor" href="#key-variables-4"><i class="fas fa-link"></i></a>
-</h3>
-</div>
 </div>
 <div id="eating-pathology-symptom-inventory" class="section level2" number="5.6">
 <h2>
 <span class="header-section-number">5.6</span> Eating Pathology Symptom Inventory<a class="anchor" aria-label="anchor" href="#eating-pathology-symptom-inventory"><i class="fas fa-link"></i></a>
 </h2>
 <p>We used the 45-item Eating Pathology Symptom Inventory (EPSI; <span class="citation">(<a href="references.html#ref-forbushDevelopmentValidationEating2013" role="doc-biblioref">Forbush et al., 2013</a>)</span>) to assess eating disorder symptoms at pre-intervention, post-intervention, and 8-week follow-up. The EPSI has been validated in clinical, college, and community samples, with 7-8 subscales in various populations, with the 8-subscale version being the most commonly-employed version of the measure <span class="citation">(<a href="references.html#ref-coniglioFactorialIntegrityValidation2018" role="doc-biblioref">Coniglio et al., 2018</a>)</span>. The 8 subscales includ: Body Dissatisfaction, Binge Eating, Cognitive Restraint, Purging, Restricting, Excessive Exercise, Negative Attitudes toward Obesity, and Muscle Building. Each item is scored on a 5-point Likert-style scale (0 = Never; 4= Often) to describe how well each item describes the participant experiences. Scores are derived by summing responses across the questions included in each subscale.</p>
-<div id="scoring-5" class="section level3" number="5.6.1">
-<h3>
-<span class="header-section-number">5.6.1</span> Scoring<a class="anchor" aria-label="anchor" href="#scoring-5"><i class="fas fa-link"></i></a>
-</h3>
+<p><strong>Scoring</strong></p>
 <p>To clean the data, the scoresheet:</p>
 <ol style="list-style-type: decimal">
 <li><p>selects only the variables that are relevant for the current measure</p></li>
@@ -213,11 +167,7 @@
 <li><p>creates eight additional variables based on sum scores reflecting eight subscales of the questionnaire: Body Dissatisfaction, Binge Eating, Cognitive Restraint, Purging, Restricting, Excessive Exercise, Negative Attitudes toward Obesity, and Muscle Building</p></li>
 <li><p>select only a few columns that will go into the final dataset</p></li>
 </ol>
-</div>
-<div id="key-variables-5" class="section level3" number="5.6.2">
-<h3>
-<span class="header-section-number">5.6.2</span> Key Variables<a class="anchor" aria-label="anchor" href="#key-variables-5"><i class="fas fa-link"></i></a>
-</h3>
+<p><strong>Key Variables</strong></p>
 <p>The variables below are sum of different subscales. <strong>Sum variables exclude those who did not complete all items of a subscale</strong></p>
 <p><code>epsi_body_dissatisfaction</code> (reflects participant’s body dissatisfaction symptoms)</p>
 <p><code>epsi_binge_eating</code> (reflects participant’s binge eating symptoms)</p>
@@ -228,165 +178,221 @@
 <p><code>epsi_negative_attitude</code> (reflects participant’s negative attidtude towards obesity symptoms)</p>
 <p><code>epsi_muscle_building</code> (reflects participant’s muscle building symptoms)</p>
 </div>
-</div>
 <div id="fat-phobia-scale---short-form" class="section level2" number="5.7">
 <h2>
 <span class="header-section-number">5.7</span> Fat Phobia Scale - Short Form<a class="anchor" aria-label="anchor" href="#fat-phobia-scale---short-form"><i class="fas fa-link"></i></a>
 </h2>
 <p>The shortened Fat Phobia Scale (FPS) utilizes 14 questions to assess fatphobia (from the 50-item original scale). It is intended to measure fat phobia levels in the tested population through various personality traits and whether there is bias when people apply them to an overweight person (<span class="citation">Bacon et al. (<a href="references.html#ref-baconFatPhobiaScale2001" role="doc-biblioref">2001</a>)</span>). The shortened FPS questionnaire demonstrates high reliability when compared to the original 50 question scale. The FPS uses a 5-point sliding scale with 1 being equal to a different negative descriptive variable for each respective question and 5 being equal to a different positive variable for each respective question. Some items are reverse scored prior to data aggregation such that th 1 (negative) to 5 (positive) valuation is maintained across the scale.</p>
-<div id="scoring-6" class="section level3" number="5.7.1">
-<h3>
-<span class="header-section-number">5.7.1</span> Scoring<a class="anchor" aria-label="anchor" href="#scoring-6"><i class="fas fa-link"></i></a>
-</h3>
-<p>In order to clean the data, the scoresheet:</p>
+<p><strong>Scoring</strong>
+In order to clean the data, the scoresheet:</p>
 <ol style="list-style-type: decimal">
 <li>Selects and renames variables to include descriptive terms from questions in the scale</li>
 <li>Codes all items such that the negative descriptor is labeled as 1 and the positive descriptor is labeled as 5</li>
 <li>Computes a mean score using all 14-items</li>
 </ol>
-</div>
-<div id="key-variables-6" class="section level3" number="5.7.2">
-<h3>
-<span class="header-section-number">5.7.2</span> Key Variables<a class="anchor" aria-label="anchor" href="#key-variables-6"><i class="fas fa-link"></i></a>
-</h3>
-<p><code>fps_mean</code> (average of scores in response to questions asking how different negative and positive descriptors should be applied to a fat person)</p>
-</div>
+<p><strong>Key Variables</strong>
+<code>fps_mean</code> (average of scores in response to questions asking how different negative and positive descriptors should be applied to a fat person)</p>
 </div>
 <div id="food-security-questionnaire" class="section level2" number="5.8">
 <h2>
 <span class="header-section-number">5.8</span> Food Security Questionnaire<a class="anchor" aria-label="anchor" href="#food-security-questionnaire"><i class="fas fa-link"></i></a>
 </h2>
-<div id="scoring-7" class="section level3" number="5.8.1">
-<h3>
-<span class="header-section-number">5.8.1</span> Scoring<a class="anchor" aria-label="anchor" href="#scoring-7"><i class="fas fa-link"></i></a>
-</h3>
-</div>
-<div id="key-variables-7" class="section level3" number="5.8.2">
-<h3>
-<span class="header-section-number">5.8.2</span> Key Variables<a class="anchor" aria-label="anchor" href="#key-variables-7"><i class="fas fa-link"></i></a>
-</h3>
-</div>
+<p>This companion file is for the Household Food Security Scale (FSQ) developed by the USDA Food and Nutrition Services (FNS) in 1995 for assessing food security within households, specifically for use in the Current Population Survey (CPS) which is run by the US Bureau of the Census (Carlson et al., 1999). One of the distinguishing factors of the FSQ is its categorical approach as it is a unidimensional scale intended to measure the severity of the food insecurity in question (Carlson et al., 1999). The FSQ demonstrates strong psychometric properties with high reliability and validity and this has been supported by historical evaluations (Engelhard Jr. et al., 2018). The FSQ uses 3 separate scales for the different types of questions: yes and no questions on a 2-point likert scale, questions with a 3 point likert scale, wherein, 2 equals never true and 0 equals often true, and questions with a 6-point likert scale where 1 equals no days and 7 equals everyday.</p>
+<p><a href="https://academic.oup.com/jn/article/129/2/510S/4731683">Measuring Food Insecurity and Hunger in the United States: Development of a National Benchmark Measure and Prevalence Estimates</a></p>
+<p><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6293410/">Using Household Fit Indices to Examine the Psychometric Quality of Food Insecurity Measures</a></p>
+<p><strong>Scoring</strong>
+In order to clean the data:</p>
+<ul>
+<li><p>Select raw variables being used</p></li>
+<li><p>Rename variables to include numbering of questions in the scale and name of scale being utilized</p></li>
+<li><p>Recode scores on 3-point likert scale so that never true is equal to 0 and often true is equal to 2</p></li>
+<li><p>Recode scores on 6-point likert scame so that 0 equals no days and 6 equals everyday</p></li>
+<li><p>Sum scores for questions 1, 2, 3, 4, 5, and 6 and rename <code>fsq_sum_access</code></p></li>
+<li><p>Average scores for questions 8, 10, 12, 14 and rename <code>fsq_average_duration</code></p></li>
+<li><p>Average scores for questions 7, 9, 11, and 13 and rename <code>fsq_yes_no</code></p></li>
+</ul>
+<p><strong>Key Variables</strong></p>
+<p><code>fsq_sum_access</code> (sum of scores answering questions asking about access to food and whether there was a lack of food security and whether there was concern regarding food security)
+<code>fsq_average_duration</code> (average of scores measuring how many days were impacted by previous questions with yes no scores regarding previous 28 days of access and measures taken because of food insecurity)
+<code>fsq_yes_no</code> (average of scores answering questions focused on measures taken in previous 28 responding to food insecurity)</p>
 </div>
 <div id="gad-7" class="section level2" number="5.9">
 <h2>
 <span class="header-section-number">5.9</span> GAD-7<a class="anchor" aria-label="anchor" href="#gad-7"><i class="fas fa-link"></i></a>
 </h2>
-<div id="scoring-8" class="section level3" number="5.9.1">
-<h3>
-<span class="header-section-number">5.9.1</span> Scoring<a class="anchor" aria-label="anchor" href="#scoring-8"><i class="fas fa-link"></i></a>
-</h3>
-</div>
-<div id="key-variables-8" class="section level3" number="5.9.2">
-<h3>
-<span class="header-section-number">5.9.2</span> Key Variables<a class="anchor" aria-label="anchor" href="#key-variables-8"><i class="fas fa-link"></i></a>
-</h3>
-</div>
+<p>Generalized Anxiety Disorder 7-item (GAD-7) is a seven-item instrument that is used to measure or assess the severity of generalised anxiety disorder (GAD). Each item asks the individual to rate the severity of his or her symptoms over the past two weeks. Response options include “not at all”, “several days”, “more than half the days” and “nearly every day”.</p>
+<p>GAD-7 has previously been examined and used in many different papers. Some examples are listed below:</p>
+<p><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7306644/">Using Generalized Anxiety Disorder-2 (GAD-2) and GAD-7 in a Primary Care Setting</a></p>
+<p><a href="https://jamanetwork.com/journals/jamainternalmedicine/fullarticle/410326">A Brief Measure for Assessing Generalized Anxiety Disorder: The GAD-7</a></p>
+<p><strong>Scoresheet</strong></p>
+<p>To clean the data, the scoresheet:</p>
+<ol style="list-style-type: decimal">
+<li><p>selects only the variables that are relevant for the current measure</p></li>
+<li><p>recode raw variables to make them consistent with the way of scoring: not at all =0, several days =1, over half the days =2, nearly every day =3</p></li>
+<li><p>creates an additional variable based on sum scores reflecting the participant’s anxiety levels</p></li>
+<li><p>select only a few columns that will go into the final dataset</p></li>
+</ol>
+<p><strong>Key variables</strong></p>
+<p><code>gad_sum_25</code> (Sum of GAD-7, 25% or less items missing and weighted by N items completed)</p>
 </div>
 <div id="goldfarb-fear-of-fat-scale" class="section level2" number="5.10">
 <h2>
 <span class="header-section-number">5.10</span> Goldfarb Fear of Fat Scale<a class="anchor" aria-label="anchor" href="#goldfarb-fear-of-fat-scale"><i class="fas fa-link"></i></a>
 </h2>
-<div id="scoring-9" class="section level3" number="5.10.1">
-<h3>
-<span class="header-section-number">5.10.1</span> Scoring<a class="anchor" aria-label="anchor" href="#scoring-9"><i class="fas fa-link"></i></a>
-</h3>
-</div>
-<div id="key-variables-9" class="section level3" number="5.10.2">
-<h3>
-<span class="header-section-number">5.10.2</span> Key Variables<a class="anchor" aria-label="anchor" href="#key-variables-9"><i class="fas fa-link"></i></a>
-</h3>
-</div>
+<p>The Goldfarb Fear of Fat Scale (GFFS) which was introduced in 1985 as a diagnostic tool to measure one’s fear of fat as it can be an indicator for the development of an eating disorder (Goldfarb et al., 1985). When used as a screening tool for both clinical and non-clinical groups, GFFS has strong test-retest reliability and psychometric properties (Pryzbyla-Basista et al., 2022). In addition, the test also has shown high validity for both populations with and without eating disorders (Goldfarb, 2010). GFFS uses a 4-point scale with 1 being equal to very untrue and 4 being equal to very true, and a 1-factor solution has been supported for scoring.</p>
+<p><a href="https://pubmed.ncbi.nlm.nih.gov/3861845/">The Goldfarb Fear of Fat Scale</a>
+<a href="https://www.sciencedirect.com/science/article/pii/S1740144521001467">An examination of the factor structure of the Goldfarb Fear of Fat Scale in clinical and non-clinical samples of Polish women</a>
+<a href="https://www.magiworld.org/Journal/2010/1008_Measures.pdf">Measures for Clinical Practice and Research: A Sourcebook, 4th edition</a></p>
+<p><strong>Scoring</strong>
+The scoresheet outlines the following steps to clean the data:</p>
+<ol style="list-style-type: decimal">
+<li><p>Select raw variables being used</p></li>
+<li><p>Rename variables to include numbering for order of questions in the scale and recode labels scale to begin at 0 instead of 1 with very untrue being equal to 0 and very true being equal to 3.</p></li>
+<li><p>Sum the total scores and rename this summary as <code>gffs_sum</code></p></li>
+<li><p>Select only new variables</p></li>
+<li><p>Create a score that is the weighted sum for those who completed at least 75% of items</p></li>
+</ol>
+<p><strong>Scoring Note</strong> Our GFFS scoring procedure re-scales the item scores to be 0-3 instead of 1-4, meaning that sum scores are scaled 0-21 instead of 7-28. To compare our means to other studies using the GFFS, add 7 to the sum score.</p>
+<p><strong>Key Variables</strong></p>
+<p><code>gffs_1_fear_fat</code> (assesses if biggest fear is becoming fat)
+<code>gffs_2_fear_little_gain</code> (assesses fear of minor weight gain)
+<code>gffs_3_overweight_risk</code> (assesses fear of becoming overweight)
+<code>gffs_4_cannot_live</code> (assesses opinions of how overweight people can live)
+<code>gffs_5_fat_worst</code> (assesses if becoming fat is worst outcome)
+<code>gffs_6_concentrate</code> (assesses if concentration on weight control prevents becoming fat)
+<code>gffs_7_painful_thought</code> (assesses if thoughts of weight gain being fearful can be controlled)
+<code>gffs_8_energy_control_weight</code> (assesses energy that goes towards weight control)
+<code>gffs_9_eat_lose_control</code> (assesses fear of losing control when eating)
+<code>gffs_10_stay_hungry</code> (assesses if staying hungry is meant to prevent becoming fat)
+<code>gffs_sum_complete</code> (sum of answers for the previous 10 variables)
+<code>gffs_sum_25</code> (weighted sum of gffs for all individuals with &lt; 25% missing items)</p>
 </div>
 <div id="ideal-body-stereotype-scale---revised" class="section level2" number="5.11">
 <h2>
 <span class="header-section-number">5.11</span> Ideal Body Stereotype Scale - Revised<a class="anchor" aria-label="anchor" href="#ideal-body-stereotype-scale---revised"><i class="fas fa-link"></i></a>
 </h2>
-<div id="scoring-10" class="section level3" number="5.11.1">
-<h3>
-<span class="header-section-number">5.11.1</span> Scoring<a class="anchor" aria-label="anchor" href="#scoring-10"><i class="fas fa-link"></i></a>
-</h3>
+<p>This companion file is for the Ideal Body Stereotype Scale, which is designed to measure internalization of the ideal-body stereotype. It was developed as part of a study examining how the dual pathway model of bulimia predicts diagnostic levels of the disorder.The measure is an adapted form of the Ideal-Body Stereotype Scale (Stice et al., 1994).</p>
+<p>Reference 1: [“A prospective test of the dual-pathway model of bulimic pathology: Mediting effects of dieting and negative affect.Journal of Abnormal Psychology”] (<a href="http://www.ori.org/files/Static%20Page%20Files/Stice01.pdf" class="uri">http://www.ori.org/files/Static%20Page%20Files/Stice01.pdf</a>)</p>
+<p><strong>Scoresheet</strong></p>
+<p>In order to clean the data:</p>
+<ol style="list-style-type: decimal">
+<li><p>Selects raw variables being used for the current measure</p></li>
+<li><p>Renames variables to be easily identified</p></li>
+<li><p>Calculate the mean scores and rename this as idss_mean</p></li>
+</ol>
+<p><strong>Key Variables</strong></p>
+<p>“idss_slender”,
+“idss_in_shape”,
+“idss_tall”,
+“idss_lean”,
+“idss_shapely”,
+“idss_long_legs”,
+“ideal_body_stereotype_scale_revised_complete”</p>
 </div>
-<div id="key-variables-10" class="section level3" number="5.11.2">
-<h3>
-<span class="header-section-number">5.11.2</span> Key Variables<a class="anchor" aria-label="anchor" href="#key-variables-10"><i class="fas fa-link"></i></a>
-</h3>
-</div>
-</div>
-<div id="phq-9" class="section level2" number="5.12">
+<div id="positive-and-negative-affect-schedule-panas" class="section level2" number="5.12">
 <h2>
-<span class="header-section-number">5.12</span> PHQ-9<a class="anchor" aria-label="anchor" href="#phq-9"><i class="fas fa-link"></i></a>
+<span class="header-section-number">5.12</span> Positive and Negative Affect Schedule (PANAS)<a class="anchor" aria-label="anchor" href="#positive-and-negative-affect-schedule-panas"><i class="fas fa-link"></i></a>
 </h2>
-<div id="scoring-11" class="section level3" number="5.12.1">
-<h3>
-<span class="header-section-number">5.12.1</span> Scoring<a class="anchor" aria-label="anchor" href="#scoring-11"><i class="fas fa-link"></i></a>
-</h3>
-</div>
-<div id="key-variables-11" class="section level3" number="5.12.2">
-<h3>
-<span class="header-section-number">5.12.2</span> Key Variables<a class="anchor" aria-label="anchor" href="#key-variables-11"><i class="fas fa-link"></i></a>
-</h3>
-</div>
+<p>This companion file is for the Positive and Negative Affect Schedule (PANAS) which was introduced in 1988 as a two-factor scale to measure one’s positive and negative moods (Watson et al., 1988). Compared to other scales measuring positive and negative affect, PANAS has high internal consistency and validity (Watson et al., 1988). In addition, the scale also shows consistent reliabiltiy, even when measured across sexes (Crawford et al., 2004). PANAS uses a 5-point likert scale with 1 being equal to very slightly or not at all and 5 being equal to extremely. In terms of scoring, sums of scores are separated for questions regarding positive affect and questions reagrding negative affect.</p>
+<p><a href="https://psycnet.apa.org/fulltext/1988-31508-001.pdf?auth_token=bfee3b8066fabebd06ab79822ba512d821684b31">Development and Validation of Brief Measures of Positive and Negative Affect: The PANAS Scales</a>
+<a href="https://bpspsychub.onlinelibrary.wiley.com/doi/pdf/10.1348/0144665031752934">The Positive and Negative Affect Schedule (PANAS): Construct validity, measurement properties and normative data in a large non-clinical sample</a>
+<a href="https://ogg.osu.edu/media/documents/MB%20Stream/PANAS.pdf">The Positive and Negative Affect Schedule</a>
+##</p>
+<p><strong>Scoresheet</strong></p>
+<p>In order to clean the data:</p>
+<ul>
+<li><p>Select raw variables being used</p></li>
+<li><p>Rename variables to include panas and numbering for order of questions in the scale</p></li>
+<li><p>Sum the total scores of questions 1, 3, 5, 8, 9, 11, 13, 15, 16, 18 and rename as <code>panas_positive_sum</code></p></li>
+<li><p>Sum the total scores of questions 2, 4, 6, 7, 10, 12, 14, 17, 19 and rename as <code>panas_negative_sum</code></p></li>
+</ul>
+<p><strong>Key Variables</strong></p>
+<p><code>panas_positive_sum</code> (sum of scores for questions identifying positive affect over the course of the last week)
+<code>panas_negative_sum</code> (sum of scores for questions identifying negative affect over the course of the last week)</p>
+<p><strong>PHQ-9</strong></p>
+<p>The 9-question Patient Health Questionnaire is a diagnostic tool introduced in 2001 to screen adult patients in a primary care setting for the presence and severity of depression. It rates depression based on the self-administered Patient Health Questionnaire.</p>
+<p>Reference 1: <a href="https://github.com/jjcurtin/arc_measures/raw/main/ASI/ReissS1986a.pdf">Anxiety Sensitivity, Anxiety Frequency, and the Prediction of Fearfulness</a>
+Reference 2: <a href="https://github.com/jjcurtin/arc_measures/raw/main/ASI3/TaylorS2007b.pdf">Robust Dimensions of Anxiety Sensitivty: Development and Initial Validation of the Anxiety Sensitivity Index-3</a></p>
+<p><strong>Scoresheet</strong></p>
+<p>In order to clean the data:</p>
+<ol style="list-style-type: decimal">
+<li><p>Selects raw variables being used for the current measure</p></li>
+<li><p>Recode labels scale to begin at 0 instead of 1 with “not at all” = 0, and “nearly every day” = 4</p></li>
+<li><p>Sum the total scores and rename this summary as phq_sum</p></li>
+</ol>
+<p><strong>Key Variables</strong></p>
+<p><code>phq_sum</code> (represents total score of the PHQ-9)</p>
 </div>
 <div id="sociocultural-attitudes-towards-appearance-questionnaire" class="section level2" number="5.13">
 <h2>
 <span class="header-section-number">5.13</span> Sociocultural Attitudes Towards Appearance Questionnaire<a class="anchor" aria-label="anchor" href="#sociocultural-attitudes-towards-appearance-questionnaire"><i class="fas fa-link"></i></a>
 </h2>
-<div id="scoring-12" class="section level3" number="5.13.1">
-<h3>
-<span class="header-section-number">5.13.1</span> Scoring<a class="anchor" aria-label="anchor" href="#scoring-12"><i class="fas fa-link"></i></a>
-</h3>
-</div>
-<div id="key-variables-12" class="section level3" number="5.13.2">
-<h3>
-<span class="header-section-number">5.13.2</span> Key Variables<a class="anchor" aria-label="anchor" href="#key-variables-12"><i class="fas fa-link"></i></a>
-</h3>
-</div>
+<p>This companion file is for the Sociocultural Attitudes Towards Appearance Questionnaire-4 (SATAQ) which measures designed to assess societal and interpersonal aspects of appearance ideals.(Schaefer, Lauren M et al., 2015) This experiment design has assess to an extensive evaluation among samples, which works very well.</p>
+<p>Schaefer, Lauren M et al. “Development and validation of the Sociocultural Attitudes Towards Appearance Questionnaire-4 (SATAQ-4).” Psychological assessment vol. 27,1 (2015): 54-67. <a href="doi:10.1037/a0037917" class="uri">doi:10.1037/a0037917</a></p>
+<p><strong>Scoresheet</strong></p>
+<p>In order to clean the data:</p>
+<ul>
+<li><p>Select raw variables being used</p></li>
+<li><p>Rename variables to include numbering for order of questions in the scale</p></li>
+<li><p>Recode labels scale to begin at 0</p></li>
+<li><p>Generate the average score of internalization of thin/low Body Fat, internalization of muscular/athletic, pressures - family, pressures - peers, and pressures - media.</p></li>
+</ul>
+<p><strong>Key Variables</strong></p>
+<p><code>sataq_average</code> (average of SATAQ)
+<code>sataq_thin_ideal</code> (average of internalization of the thin ideal)
+<code>sataq_athletic_ideal</code> (average of internalization of athletic ideal)
+<code>sataq_parental_pressure</code> (average of parental pressure)
+<code>sataq_peer_pressure</code> (average of peer pressure)
+<code>sataq_media_pressure</code> (average of media pressure)</p>
 </div>
 <div id="traditional-masculinity-femininity-scale" class="section level2" number="5.14">
 <h2>
 <span class="header-section-number">5.14</span> Traditional Masculinity-Femininity Scale<a class="anchor" aria-label="anchor" href="#traditional-masculinity-femininity-scale"><i class="fas fa-link"></i></a>
 </h2>
-<div id="scoring-13" class="section level3" number="5.14.1">
-<h3>
-<span class="header-section-number">5.14.1</span> Scoring<a class="anchor" aria-label="anchor" href="#scoring-13"><i class="fas fa-link"></i></a>
-</h3>
-</div>
-<div id="key-variables-13" class="section level3" number="5.14.2">
-<h3>
-<span class="header-section-number">5.14.2</span> Key Variables<a class="anchor" aria-label="anchor" href="#key-variables-13"><i class="fas fa-link"></i></a>
-</h3>
-</div>
+<p>This companion file is for the Traditional Masculinity-Femininity Scale (TMFS) which was introduced in 2016 to assess self-ascribed masculinity and femininity (Kachel et al., 2016). TMFS has demonstrated high reliability for both sexes (Kachel et al., 2016). Additionally, TMFS shows validity due to its ability to reduce issues of social desirability when given as a self-assessment (Kachel et al., 2016). TMFS uses a 7-point likert scale with 1 being equal to totally masculine and 7 being equal to totally feminine. In terms of scoring, the mean is taken of all given answers with an average less than 4 implying masculinity and an average greater than 4 implying femininity.</p>
+<p><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4932111/">Traditional Masculinity and Femininity: Validation of a New Scale Assessing Gender Roles</a></p>
+<p><strong>Scoresheet</strong></p>
+<p>In order to clean the data:</p>
+<ul>
+<li><p>Select raw variables being used</p></li>
+<li><p>Rename variables to include numbering of questions in the scale</p></li>
+<li><p>Average the total scores and rename as <code>tmfs_mean</code></p></li>
+</ul>
+<p><strong>Key Variables</strong></p>
+<p><code>tmfs_mean</code> (average of scores in response to questions asking about different situations where one could consider their femininity and masculinity)</p>
 </div>
 <div id="universal-measure-of-bias---fat" class="section level2" number="5.15">
 <h2>
 <span class="header-section-number">5.15</span> Universal Measure of Bias - Fat<a class="anchor" aria-label="anchor" href="#universal-measure-of-bias---fat"><i class="fas fa-link"></i></a>
 </h2>
-<div id="scoring-14" class="section level3" number="5.15.1">
-<h3>
-<span class="header-section-number">5.15.1</span> Scoring<a class="anchor" aria-label="anchor" href="#scoring-14"><i class="fas fa-link"></i></a>
-</h3>
-</div>
-<div id="key-variables-14" class="section level3" number="5.15.2">
-<h3>
-<span class="header-section-number">5.15.2</span> Key Variables<a class="anchor" aria-label="anchor" href="#key-variables-14"><i class="fas fa-link"></i></a>
-</h3>
-</div>
+<p>This companion file is for the Universal Measure of Bias - Fat (UMB-Fat) which was introduced in 2008 to assess weight bias and demonstrates strong psychometric properties when utilized as an assessment (Durso et al., 2008). It has been compared alongside two other scales measuring universal bias against ‘gay’ or ‘Muslim’ individuals and demonstrates high internal consistency and construct validity (Latner et al., 2008). UMB-Fat uses a 7-point likert scale with 1 being equal to strongly agree and 7 being equal to strongly disagree. In terms of scoring, sums of scores are separated amongst four categories of bias: adverse judgement, social distance, attraction, and equal rights.</p>
+<p><a href="https://pubmed.ncbi.nlm.nih.gov/18978768/">Understanding self-directed stigma: development of the weight bias internalization scale</a>
+<a href="https://pubmed.ncbi.nlm.nih.gov/18414421/">Weighing obesity stigma: the relative strength of different forms of bias</a>
+<a href="https://www.researchgate.net/publication/262414384_UMB-FAT">UMB-FAT</a></p>
+<p><strong>Scoresheet</strong></p>
+<p>In order to clean the data:</p>
+<ul>
+<li><p>Select raw variables being used</p></li>
+<li><p>Rename variables to include descriptors of questions asked in the scale</p></li>
+<li><p>Reverse code questions 5, 7, 8, 9, 12, 15, 16, and 19 so that higher scores indicate greater stigma</p></li>
+<li><p>Sum the total scores of questions 5, 7, 12 ,15 , 16 and rename as <code>umb_adverse_judgement_sum</code></p></li>
+<li><p>Sum the total scores of questions 2, 8, 17, 19, 20 and rename as <code>umb_social_distance_sum</code></p></li>
+<li><p>Sum the total scores of questions 3, 4, 6, 9, 10 and rename as <code>umb_attraction_sum</code></p></li>
+<li><p>Sum the total scores of questions 1, 11, 13, 14, 18 and rename as <code>umb_equal_rights_sum</code></p></li>
+</ul>
+<p>-Total score with sum of all items as <code>umb_sum_total</code></p>
+<p><strong>Key Variables</strong></p>
+<p><code>umb_adverse_judgement_sum_25</code> (sum of scores for questions identifying bias in the form of adverse judgement against fat people - 25% or less missing)
+<code>umb_social_distance_sum_25</code> (sum of scores for questions identifying bias in the form of social distance from fat people - 25% or less missing)
+<code>umb_attraction_sum_25</code> (sum of scores for questions identifying bias in the form of attraction towards fat people - 25% or less missing)
+<code>umb_equal_rights_sum_25</code> (sum of scores for questions identifying bias in the form of opinons of equal rights for fat people - 25% or less missing)
+<code>umb_sum_total_25</code> (sum of total umb-FAT scores - 25% or less missing)</p>
 </div>
 <div id="weight-and-dieting-history-questionnaire" class="section level2" number="5.16">
 <h2>
 <span class="header-section-number">5.16</span> Weight and Dieting History Questionnaire<a class="anchor" aria-label="anchor" href="#weight-and-dieting-history-questionnaire"><i class="fas fa-link"></i></a>
 </h2>
-<div id="scoring-15" class="section level3" number="5.16.1">
-<h3>
-<span class="header-section-number">5.16.1</span> Scoring<a class="anchor" aria-label="anchor" href="#scoring-15"><i class="fas fa-link"></i></a>
-</h3>
-</div>
-<div id="key-variables-15" class="section level3" number="5.16.2">
-<h3>
-<span class="header-section-number">5.16.2</span> Key Variables<a class="anchor" aria-label="anchor" href="#key-variables-15"><i class="fas fa-link"></i></a>
-</h3>
 
-</div>
 </div>
 </div>
   <div class="chapter-nav">
@@ -396,102 +402,22 @@
     <nav id="toc" data-toggle="toc" aria-label="On this page"><h2>On this page</h2>
       <ul class="nav navbar-nav">
 <li><a class="nav-link" href="#self-report-measures"><span class="header-section-number">5</span> Self-Report Measures</a></li>
-<li>
-<a class="nav-link" href="#childhood-trauma-questionnaire"><span class="header-section-number">5.1</span> Childhood Trauma Questionnaire</a><ul class="nav navbar-nav">
-<li><a class="nav-link" href="#scoring"><span class="header-section-number">5.1.1</span> Scoring</a></li>
-<li><a class="nav-link" href="#key-variables"><span class="header-section-number">5.1.2</span> Key Variables</a></li>
-</ul>
-</li>
-<li>
-<a class="nav-link" href="#demographics"><span class="header-section-number">5.2</span> Demographics</a><ul class="nav navbar-nav">
-<li><a class="nav-link" href="#scoring-1"><span class="header-section-number">5.2.1</span> Scoring</a></li>
-<li><a class="nav-link" href="#key-variables-1"><span class="header-section-number">5.2.2</span> Key Variables</a></li>
-</ul>
-</li>
-<li>
-<a class="nav-link" href="#ed-history-questionnaire"><span class="header-section-number">5.3</span> ED History Questionnaire</a><ul class="nav navbar-nav">
-<li><a class="nav-link" href="#scoring-2"><span class="header-section-number">5.3.1</span> Scoring</a></li>
-<li><a class="nav-link" href="#key-variables-2"><span class="header-section-number">5.3.2</span> Key Variables</a></li>
-</ul>
-</li>
-<li>
-<a class="nav-link" href="#ed100k"><span class="header-section-number">5.4</span> ED100k</a><ul class="nav navbar-nav">
-<li><a class="nav-link" href="#scoring-3"><span class="header-section-number">5.4.1</span> Scoring</a></li>
-<li><a class="nav-link" href="#key-variables-3"><span class="header-section-number">5.4.2</span> Key Variables</a></li>
-</ul>
-</li>
-<li>
-<a class="nav-link" href="#ed-fear-questionnaire"><span class="header-section-number">5.5</span> ED Fear Questionnaire</a><ul class="nav navbar-nav">
-<li><a class="nav-link" href="#scoring-4"><span class="header-section-number">5.5.1</span> Scoring</a></li>
-<li><a class="nav-link" href="#key-variables-4"><span class="header-section-number">5.5.2</span> Key Variables</a></li>
-</ul>
-</li>
-<li>
-<a class="nav-link" href="#eating-pathology-symptom-inventory"><span class="header-section-number">5.6</span> Eating Pathology Symptom Inventory</a><ul class="nav navbar-nav">
-<li><a class="nav-link" href="#scoring-5"><span class="header-section-number">5.6.1</span> Scoring</a></li>
-<li><a class="nav-link" href="#key-variables-5"><span class="header-section-number">5.6.2</span> Key Variables</a></li>
-</ul>
-</li>
-<li>
-<a class="nav-link" href="#fat-phobia-scale---short-form"><span class="header-section-number">5.7</span> Fat Phobia Scale - Short Form</a><ul class="nav navbar-nav">
-<li><a class="nav-link" href="#scoring-6"><span class="header-section-number">5.7.1</span> Scoring</a></li>
-<li><a class="nav-link" href="#key-variables-6"><span class="header-section-number">5.7.2</span> Key Variables</a></li>
-</ul>
-</li>
-<li>
-<a class="nav-link" href="#food-security-questionnaire"><span class="header-section-number">5.8</span> Food Security Questionnaire</a><ul class="nav navbar-nav">
-<li><a class="nav-link" href="#scoring-7"><span class="header-section-number">5.8.1</span> Scoring</a></li>
-<li><a class="nav-link" href="#key-variables-7"><span class="header-section-number">5.8.2</span> Key Variables</a></li>
-</ul>
-</li>
-<li>
-<a class="nav-link" href="#gad-7"><span class="header-section-number">5.9</span> GAD-7</a><ul class="nav navbar-nav">
-<li><a class="nav-link" href="#scoring-8"><span class="header-section-number">5.9.1</span> Scoring</a></li>
-<li><a class="nav-link" href="#key-variables-8"><span class="header-section-number">5.9.2</span> Key Variables</a></li>
-</ul>
-</li>
-<li>
-<a class="nav-link" href="#goldfarb-fear-of-fat-scale"><span class="header-section-number">5.10</span> Goldfarb Fear of Fat Scale</a><ul class="nav navbar-nav">
-<li><a class="nav-link" href="#scoring-9"><span class="header-section-number">5.10.1</span> Scoring</a></li>
-<li><a class="nav-link" href="#key-variables-9"><span class="header-section-number">5.10.2</span> Key Variables</a></li>
-</ul>
-</li>
-<li>
-<a class="nav-link" href="#ideal-body-stereotype-scale---revised"><span class="header-section-number">5.11</span> Ideal Body Stereotype Scale - Revised</a><ul class="nav navbar-nav">
-<li><a class="nav-link" href="#scoring-10"><span class="header-section-number">5.11.1</span> Scoring</a></li>
-<li><a class="nav-link" href="#key-variables-10"><span class="header-section-number">5.11.2</span> Key Variables</a></li>
-</ul>
-</li>
-<li>
-<a class="nav-link" href="#phq-9"><span class="header-section-number">5.12</span> PHQ-9</a><ul class="nav navbar-nav">
-<li><a class="nav-link" href="#scoring-11"><span class="header-section-number">5.12.1</span> Scoring</a></li>
-<li><a class="nav-link" href="#key-variables-11"><span class="header-section-number">5.12.2</span> Key Variables</a></li>
-</ul>
-</li>
-<li>
-<a class="nav-link" href="#sociocultural-attitudes-towards-appearance-questionnaire"><span class="header-section-number">5.13</span> Sociocultural Attitudes Towards Appearance Questionnaire</a><ul class="nav navbar-nav">
-<li><a class="nav-link" href="#scoring-12"><span class="header-section-number">5.13.1</span> Scoring</a></li>
-<li><a class="nav-link" href="#key-variables-12"><span class="header-section-number">5.13.2</span> Key Variables</a></li>
-</ul>
-</li>
-<li>
-<a class="nav-link" href="#traditional-masculinity-femininity-scale"><span class="header-section-number">5.14</span> Traditional Masculinity-Femininity Scale</a><ul class="nav navbar-nav">
-<li><a class="nav-link" href="#scoring-13"><span class="header-section-number">5.14.1</span> Scoring</a></li>
-<li><a class="nav-link" href="#key-variables-13"><span class="header-section-number">5.14.2</span> Key Variables</a></li>
-</ul>
-</li>
-<li>
-<a class="nav-link" href="#universal-measure-of-bias---fat"><span class="header-section-number">5.15</span> Universal Measure of Bias - Fat</a><ul class="nav navbar-nav">
-<li><a class="nav-link" href="#scoring-14"><span class="header-section-number">5.15.1</span> Scoring</a></li>
-<li><a class="nav-link" href="#key-variables-14"><span class="header-section-number">5.15.2</span> Key Variables</a></li>
-</ul>
-</li>
-<li>
-<a class="nav-link" href="#weight-and-dieting-history-questionnaire"><span class="header-section-number">5.16</span> Weight and Dieting History Questionnaire</a><ul class="nav navbar-nav">
-<li><a class="nav-link" href="#scoring-15"><span class="header-section-number">5.16.1</span> Scoring</a></li>
-<li><a class="nav-link" href="#key-variables-15"><span class="header-section-number">5.16.2</span> Key Variables</a></li>
-</ul>
-</li>
+<li><a class="nav-link" href="#childhood-trauma-questionnaire"><span class="header-section-number">5.1</span> Childhood Trauma Questionnaire</a></li>
+<li><a class="nav-link" href="#demographics"><span class="header-section-number">5.2</span> Demographics</a></li>
+<li><a class="nav-link" href="#ed-history-questionnaire"><span class="header-section-number">5.3</span> ED History Questionnaire</a></li>
+<li><a class="nav-link" href="#ed100k"><span class="header-section-number">5.4</span> ED100k</a></li>
+<li><a class="nav-link" href="#ed-fear-questionnaire"><span class="header-section-number">5.5</span> ED Fear Questionnaire</a></li>
+<li><a class="nav-link" href="#eating-pathology-symptom-inventory"><span class="header-section-number">5.6</span> Eating Pathology Symptom Inventory</a></li>
+<li><a class="nav-link" href="#fat-phobia-scale---short-form"><span class="header-section-number">5.7</span> Fat Phobia Scale - Short Form</a></li>
+<li><a class="nav-link" href="#food-security-questionnaire"><span class="header-section-number">5.8</span> Food Security Questionnaire</a></li>
+<li><a class="nav-link" href="#gad-7"><span class="header-section-number">5.9</span> GAD-7</a></li>
+<li><a class="nav-link" href="#goldfarb-fear-of-fat-scale"><span class="header-section-number">5.10</span> Goldfarb Fear of Fat Scale</a></li>
+<li><a class="nav-link" href="#ideal-body-stereotype-scale---revised"><span class="header-section-number">5.11</span> Ideal Body Stereotype Scale - Revised</a></li>
+<li><a class="nav-link" href="#positive-and-negative-affect-schedule-panas"><span class="header-section-number">5.12</span> Positive and Negative Affect Schedule (PANAS)</a></li>
+<li><a class="nav-link" href="#sociocultural-attitudes-towards-appearance-questionnaire"><span class="header-section-number">5.13</span> Sociocultural Attitudes Towards Appearance Questionnaire</a></li>
+<li><a class="nav-link" href="#traditional-masculinity-femininity-scale"><span class="header-section-number">5.14</span> Traditional Masculinity-Femininity Scale</a></li>
+<li><a class="nav-link" href="#universal-measure-of-bias---fat"><span class="header-section-number">5.15</span> Universal Measure of Bias - Fat</a></li>
+<li><a class="nav-link" href="#weight-and-dieting-history-questionnaire"><span class="header-section-number">5.16</span> Weight and Dieting History Questionnaire</a></li>
 </ul>
 
       <div class="book-extra">
@@ -508,7 +434,7 @@
 <footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
 
   <div class="col-12 col-md-6 mt-3">
-    <p>"<strong>Body Advocacy Movement - Study Procedures and Measures</strong>" was written by Katherine Schaumberg. It was last built on 2022-09-18.</p>
+    <p>"<strong>Body Advocacy Movement - Study Procedures and Measures</strong>" was written by Katherine Schaumberg. It was last built on 2022-09-24.</p>
   </div>
 
   <div class="col-12 col-md-6 mt-3">
