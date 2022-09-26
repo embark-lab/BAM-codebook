@@ -5,7 +5,7 @@ date: "`r Sys.Date()`"
 site: bookdown::bookdown_site
 output: bookdown::gitbook
 keep_md: true
-bibliography: ['BAM-bookdown.bib']
+bibliography: ['BAM-codebook.bib']
 csl: apa-single-spaced.csl
 link-citations: true
 github-repo: embark-lab/bam-bookdown

@@ -16,75 +16,132 @@ Scoring for the CTQ includes:
 4. Summing dichotimized items to create the minimization score
 
 **Key Variables**
-Key summary variables from the CTQ include: 
-`ctq_emo_abuse_complete` (CTQ emotional abuse subscale sum - completers only)
 
-`ctq_emo_abuse_NAs` (number of NA items in the subscale)
+All variables below with appendix _25 reflect the final scoring of weighted subscale sum scores with < 25% missing data.
 
-`ctq_emo_abuse_weighted_sum` (CTQ weighted sum of scores contributing to the emotional abuse subscale)
+`ctq_emo_abuse_25` 
 
-`ctq_phys_abuse_complete` (CTQ pysical abuse subscale sum - completers only)
+`ctq_phys_abuse_25`
 
-`ctq_phys_abuse_NAs` (number of NA items in the subscale)
+`ctq_sex_abuse_25` 
 
-`ctq_phys_abuse_weighted_sum` (CTQ weighted sum of scores contributing to the emotional abuse subscale)
+`ctq_emo_neglect_25`
 
-`ctq_sex_abuse_complete` (CTQ sexual abuse subscale sum - completers only)
+`ctq_phys_neglect_25`
 
-`ctq_sex_abuse_NAs` (number of NA items in the subscale)
-
-`ctq_sex_abuse_weighted_sum` (CTQ weighted sum of scores contributing to the sexual abuse subscale)
-
-`ctq_emo_neglect_complete`(CTQ emotional neglect subscale sum - completers only)
-
-`ctq_emo_neglect_NAs` (number of NA items in the subscale)
-
-`ctq_emo_neglect_weighted_sum` (CTQ weighted sum of scores contributing to the emotional neglect subscale)
-
-`ctq_phys_neglect_complete`(CTQ physical neglect subscale sum - completers only)
-
-`ctq_phys_neglect_NAs` (number of NA items in the subscale)
-
-`ctq_phys_neglect_weighted_sum` (CTQ weighted sum of scores contributing to the emotional neglect subscale)
-
-`ctq_minimize` (CTQ minimization score - completers only)
+`ctq_minimize_complete` (CTQ minimization score - completers only)
 
 ## Demographics
-Demographics caputred in the current study include: Race, Sexual Orientation, Gender, Ethnicity, Student Status, Working Status, Current Living Situation, Assessment Date, and Birthdate.  
+Demographics captured in the current study include: Race, Sexual Orientation, Gender, Ethnicity, Student Status, Working Status, Current Living Situation, Assessment Date, and Age
 
 **Scoring**
 
-We start by cleaning and importing data from the data collection form, which captures demographic variables in this study. Data Cleaning steps include: 
+Demographics are primarily drawn from the data collection form (measure prefix 'dcf'). Cleaning steps include:
 
 1. Selection of variables that are part of the data collection form (prefix 'dcf') and winnow variables to be included in the master dataset. 
 
 2. Calculation of age in years and remove birthdate (HIPPA Identifier) from the data set. 
 
-3. Changing assessment date to only capture month and year of assessment for de-identification.
+3. Changing assessment date to only capture month and year of assessment for further de-identification.
 
-4. Binning categorical variables to response options most appropriate for 
-
+4. Binning categorical variables to response options most appropriate for race and ethnicity
 
 **Key Variables**
 
 `age` (Participant Age in Years)
 
-`race` (Participant Race, recoded to: )
+`race` (Participant Race, recoded to: White[0], Black[1], Asian[2], Mixed Race/Other[3])
 
-`ethnicity` 
+`ethnicity` (Hispanic[1] or non-Hispanic[0]) 
 
-`sex_orientation` (Participant sexual orientation)
+`race_eth_1` (Race and ethnicity recoded to: White[0], Non-Hispanic Black [1], Non-Hispanic Asian [2], Hispanic [3], Mixed/Other [4])
 
-`gender`
+`race_eth_2` (Race and ethnicity recoded to: White [0], Asian [1], Other [2])
 
-`assessment_month`
+`sex_orientation` (Participant sexual orientation, recoded to: Heterosexual [0], Bi/Pansexual [1], Gay/Lesbian [2])
+
+`sex_minority` (Participant sexual orientation recoded to Hetersoxesual[0] or Sexual Minority[1])
+
+`gender` (Participant gender identity recoded to Male[0], Female [1], NonBinary/Other[2])
+
+`gender_TNB` (Participant gender identity recoded to: Cisgender [0] or Trans/Nonbinary [1])
+
+`gender_female_nb` (Participant gender identity coded to Male = 0 and Female/Nonbinary = 1)
+
+`sex_gender_minority` (Participant sexual and gender identity coded to CisHet [0] or Sexual/Gender Minority [1])
+
+`assessment_month` (assessment recoded to assessment month and year)
+
+## Dieting and Weight History Questionnaire
+
+The Dieting and Weight History Questionnaire (DWHQ), was developed by @wittAssessingThreeTypes2013 to measure three dimensions of dieting: (1) frequency of past dieting and overeating (i.e. history of dieting), (2) current dieting to lose weight, and (3) weight suppression, or the difference between an individual’s current weight and his or her highest previous weight.  
+
+**Scoring**
+
+**Key Variables**
 
 ## ED History Questionnaire
+The Eating Disorder History Questionnaire was developed by the EMBARK Lab for the current project to assess eating disorder history in the sample. It was used in baseline assessment for the current project prior to September, 2022, at which point the ED100k was substituted as it has previously been validated for this purpose. The Eating Disorder History Questionnaire follows diagnostic algorithmic scoring to assess (via self-report) for history of Anorexia Nervosa, Atypical Anorexia Nervosa, Bulimia Nervosa, Binge Eating Disorder, and Subclinical Eating Pathology. 
+
+**Scoring**
+
+**Key Variables**
 
 ## ED100k
+ED100K.V3 questionnaire is a self-report, ED assessment based on the Structured Clinical Interview for DSM-5, Eating Disorders[@thorntonAnorexiaNervosaGenetics2018]. Items assess DSM-5 criteria for AN, BN, BED, and other specified feeding and eating disorders (OSFED). The ED100K-V1 was found to be a valid measure of eating disorders and eating disorder behaviors. Positive predictive values for AN Criterion B, Criterion C, and binge eating ranged from 88 to 100% in the validation sample. Among women who had a negative screen, the probability of not having these criteria or behaviors ranged from 72 to 100% in the validation sample. The correlation between questionnaire and interview for lowest illness-related BMI was 0.91. Overall, the questionnaire captures historical: eating disorder diagnosis, eating disorder symptoms, eating disorder course of illness, and diagnostic fluctuation within eating disorder diagnosis.
 
+**Scoring**
 
-## ED Fear Questionnaire
+Data cleaning steps include: 
+
+**1-2.** selects variables; recodes the compensatory exercise variable to remove missing codes, and recodes intentional weight control variables to remove missing codes and set '0' equal to a 'No/Never' answer
+
+**3.** overrides skip logic for exercise and other weight control variables such that if individuals have an initial 'no' answer where skip logic has overridden future questions, a '0' (reflecting a 'no/never' answer) is entered in the subsequent question regarding details of the behavior. 
+
+**4.** Second recode for these questions such that missing codes are  change to 'NA' and the '0' answers are labelled appropriately
+
+**5-7.** specifically calculate logic necessary to specify exercise-related outcome variables, described in key variables below.
+
+**8.** cleans up the dataset by removing erroneous variables that are no longer needed. 
+
+After these steps ar complete,  additional weight suppression variables are calculated and added to the data in the R-script
+
+**Key variables**
+
+|   ***Exercise Variables***
+
+|   `ED100k_exercise_icb` (Was exercise ever used as a behavior to intentionally control weight or shape?)
+|   `ED100k_ex_compulsive` (Ever felt compelled to exercise for wt and shape control OR uneasy / distressed if unable to exercise)
+|   `ED100k_ex_interfere` (Did exercise ever interfere in one's life (changing eating habits, declining opportunities to be with friends, exercising despite illness or injury)
+|   `ED100k_ex_excessive` (>1 month of psychologically driven exercise every day or nearly every day)
+|   `ED100k_ex_addictive` (Having psychologically compulsive/driven exercise (feeling compelled to exercise or distressed if unable) that lasted for at least one month AND at least one life interfering symptom)
+|   `ED100k_ex_compulsive_1mo` (Compulsive/Driven Exercise that lasted for at least one month)
+|   `ED100k_ex_maladaptive_1mo` (reports driven exercise for at least one month OR any compensatory exercise)
+|   `ex_current` (Do you currently exercise to control weight and shape AND feel compelled to exercise or distress if unable to exercise?)
+|
+|   ***Eating Disorder Behavior Variables***
+|
+|   ***Case Status Variables***
+|
+|   ***Weight suppression variables***
+|
+|   `ED100k_wt_suppress_high_current` - current weight suppression 
+|   `ED100k_wt_suppress_high_lowest` - difference between highest weight and lowest weight at adult height
+|   `ED100k_wt_suppress_high_AN` - difference between highest ever weight at adult height and weight during an AN episode
+|   `ED100k_wt_suppress_current_AN` - difference between current weight and weight duirng an AN episode 
+|   `ED100k_bmi_suppress_high_current` : current BMI suppression
+|   `ED100k_bmi_suppress_high_lowest`: high-low BMI suppression
+|   `ED100k_bmi_suppress_high_AN` : high-AN BMI suppression
+|   `ED100k_bmi_suppress_current_AN` : current-AN BMI suppression (difference between current BMI and AN BMI)
+
+## Eating Disorder Fear Questionnaire (EDFQ)
+
+The EDFQ is a self-report measure of eating disorder specific fears, which was developed and validated in undergraduate college students along with a clinical sample of eating disorder patients by @levinsonDevelopmentValidationEating2019.  A five-factor strucutre for the EDFQ was established, consisting of subscales assessing fear of weight gain, social consequences, personal consequences, physical sensations, and social eating. The EDFQ demonstrates good internal consistency and convergent, divergent, incremental, and construct validity.
+
+**Scoring**
+
+**Key Variables**
+
 
 ## Eating Pathology Symptom Inventory 
 
@@ -92,148 +149,139 @@ We used the 45-item Eating Pathology Symptom Inventory (EPSI; [@forbushDevelopme
 
 **Scoring**
 
-To clean the data, the scoresheet:
+Cleaning steps include: 
 
-1) selects only the variables that are relevant for the current measure
+**1-2.** selecting only the variables that are relevant for the current measure and renaming raw variables to appropraite names that are easy to understand
 
-2) rename raw variables to appropraite names that are easy to understand
+**3.** Creating eight additional variables based on sum scores reflecting eight subscales of the questionnaire: Body Dissatisfaction, Binge Eating, Cognitive Restraint, Purging, Restricting, Excessive Exercise, Negative Attitudes toward Obesity, and Muscle Building
 
-3) creates eight additional variables based on sum scores reflecting eight subscales of the questionnaire: Body Dissatisfaction, Binge Eating, Cognitive Restraint, Purging, Restricting, Excessive Exercise, Negative Attitudes toward Obesity, and Muscle Building
-
-4) select only a few columns that will go into the final dataset
+**4.** Creating final variables for use that include calculated average variables for all individuals missing less than 25% of data on a given subscale. For those with missing data, weighted scores are used.
 
 **Key Variables**
 
-The variables below are sum of different subscales. **Sum variables exclude those who did not complete all items of a subscale**
+All variables below reflect the final scoring of weighted subscale sum scores with < 25% missing data. 
 
-`epsi_body_dissatisfaction` (reflects participant's body dissatisfaction symptoms)
+`epsi_body_dissatisfaction_25` 
 
-`epsi_binge_eating` (reflects participant's binge eating symptoms)
+`epsi_binge_25` (binge eating)
 
-`epsi_cognitive_restraint` (reflects participant's cognitive restraint symptoms)
+`epsi_restraint_25`
 
-`epsi_purging` (reflects participant's purging symptoms)
+`epsi_purging_25` 
 
-`epsi_restricting` (reflects participant's restricting symptoms)
+`epsi_restrict_25`
 
-`epsi_excessive_exercise` (reflects participant's excessive exercise symptoms)
+`epsi_exercise_25` (excessive exercise)
 
-`epsi_negative_attitude` (reflects participant's negative attidtude towards obesity symptoms)
+`epsi_neg_attitude_25` (negative attidtude towards obesity)
 
-`epsi_muscle_building` (reflects participant's muscle building symptoms)
+`epsi_muscle_building_25`
 
 ## Fat Phobia Scale - Short Form 
 
 The shortened Fat Phobia Scale (FPS)  utilizes 14 questions to assess fatphobia (from the 50-item original scale). It is intended to measure fat phobia levels in the tested population through various personality traits and whether there is bias when people apply them to an overweight person (@baconFatPhobiaScale2001). The shortened FPS questionnaire demonstrates high reliability when compared to the original 50 question scale. The FPS uses a 5-point sliding scale with 1 being equal to a different negative descriptive variable for each respective question and 5 being equal to a different positive variable for each respective question. Some items are reverse scored prior to data aggregation such that th 1 (negative) to 5 (positive) valuation is maintained across the scale.
 
 **Scoring**
-In order to clean the data, the scoresheet:
 
-1. Selects and renames variables to include descriptive terms from questions in the scale
-2. Codes all items such that the negative descriptor is labeled as 1 and the positive descriptor is labeled as 5
-3. Computes a mean score using all 14-items 
+Data Cleaning includes: 
+
+**1-2.** Selecting and renaming variables to include descriptive terms from questions in the scale.
+
+**3.** Coding  all items such that the negative descriptor is labeled as 1 and the positive descriptor is labeled as 5.
+
+**4.** Computing a mean score using all 14-items 
 
 **Key Variables**
-`fps_mean` (average of scores in response to questions asking how different negative and positive descriptors should be applied to a fat person)
 
+`fps_mean` (Mean score of all 14 items)
 
-## Food Security Questionnaire
+## USDA Adult Food Security Survey Module (FSSM)
 
-This companion file is for the Household Food Security Scale (FSQ) developed by the USDA Food and Nutrition Services (FNS) in 1995 for assessing food security within households, specifically for use in the Current Population Survey (CPS) which is run by the US Bureau of the Census (Carlson et al., 1999). One of the distinguishing factors of the FSQ is its categorical approach as it is a unidimensional scale intended to measure the severity of the food insecurity in question (Carlson et al., 1999). The FSQ demonstrates strong psychometric properties with high reliability and validity and this has been supported by historical evaluations (Engelhard Jr. et al., 2018). The FSQ uses 3 separate scales for the different types of questions: yes and no questions on a 2-point likert scale, questions with a 3 point likert scale, wherein, 2 equals never true and 0 equals often true, and questions with a 6-point likert scale where 1 equals no days and 7 equals everyday. 
+The U.S. Adult Food Security - Survey Module (FSSM) [@carlsonMeasuringFoodInsecurity1999] was developed by the USDA Food and Nutrition Services in 1995 for assessing food security within households, specifically for use in the Current Population Survey. The FSSM is primarily designed as a unidimensional, 10-item scale. Previous use in college students indicates that students respond differently to FSSM items relative to the general population, that the FSSM may be a less reliable measure of food insecurity in college students relative to other adults in the US population [@nikolausAreEstimatesFood2019], and that there is potential for misclassification of FI college students [@nikolausFoodInsecurityCollege2020], which is a note of caution when interpreting findings from this measure in our young adult sample. however, at present, there is no alternative measure of FI amongst college students with a more robust track-record of validity.
 
-[Measuring Food Insecurity and Hunger in the United States: Development of a National Benchmark Measure and Prevalence Estimates](https://academic.oup.com/jn/article/129/2/510S/4731683)
+Responses of “yes,” “often,” “sometimes,” “almost every month,” and “some months but not every month” are coded as affirmative. The sum of affirmative responses to the 10 questions in the Adult Food Security Scale is then the raw score on the scale.
 
-[Using Household Fit Indices to Examine the Psychometric Quality of Food Insecurity Measures](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6293410/)
+Food security status is assigned as follows:
+|
+| - Raw score 0: High food security
+| - Raw score 1-2: Marginal food security 
+| - Raw score 3-5: Low food security 
+| - Raw score 6-10: Very low food security 
+|
+|When dichotomizing, the food security status of the first two categories in combination is described as food secure and the latter two as food insecure.
 
 **Scoring**
-In order to clean the data:
 
-- Select raw variables being used
+Data cleaning includes: 
 
-- Rename variables to include numbering of questions in the scale and name of scale being utilized
+**1-2.** Select and rename variables to include numbering of questions in the scale and name of scale being utilized
 
-- Recode scores on 3-point likert scale so that never true is equal to 0 and often true is equal to 2
+**3.** Recode scores in accordance with recommendations (noted above)
 
-- Recode scores on 6-point likert scame so that 0 equals no days and 6 equals everyday
+**4.** Create sum scores for dichotomized questions - `fssm_total`, and average of frequency items `fssm_average_freq`. 
 
-- Sum scores for questions 1, 2, 3, 4, 5, and 6 and rename `fsq_sum_access`
-
-- Average scores for questions 8, 10, 12, 14 and rename `fsq_average_duration`
-
-- Average scores for questions 7, 9, 11, and 13 and rename `fsq_yes_no`
+**5.** Create Food Security Status variable - as outlined above
 
 
 **Key Variables**
 
-`fsq_sum_access` (sum of scores answering questions asking about access to food and whether there was a lack of food security and whether there was concern regarding food security)
-`fsq_average_duration` (average of scores measuring how many days were impacted by previous questions with yes no scores regarding previous 28 days of access and measures taken because of food insecurity)
-`fsq_yes_no` (average of scores answering questions focused on measures taken in previous 28 responding to food insecurity)
+`fssm_total_25` (sum of 10-item FSSM, those with 25% or less missing - weighted by N completed)
 
+`fssm_average_freq_complete` (average of scores measuring how many days were impacted by previous questions with yes no scores regarding previous 28 days of access and measures taken because of food insecurity - completers)
 
 ## GAD-7
 
-Generalized Anxiety Disorder 7-item (GAD-7) is a seven-item instrument that is used to measure or assess the severity of generalised anxiety disorder (GAD). Each item asks the individual to rate the severity of his or her symptoms over the past two weeks. Response options include “not at all”, “several days”, “more than half the days” and “nearly every day”.
-
-GAD-7 has previously been examined and used in many different papers. Some examples are listed below:
-
-[Using Generalized Anxiety Disorder-2 (GAD-2) and GAD-7 in a Primary Care Setting](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7306644/)
-
-[A Brief Measure for Assessing Generalized Anxiety Disorder: The GAD-7](https://jamanetwork.com/journals/jamainternalmedicine/fullarticle/410326)
+Generalized Anxiety Disorder 7-item (GAD-7) [@spitzerBriefMeasureAssessing2006] is a seven-item instrument that is used to measure or assess the severity of generalised anxiety disorder (GAD). Each item asks the individual to rate the severity of his or her symptoms over the past two weeks. Response options include “not at all”, “several days”, “more than half the days” and “nearly every day”. The GAD-7 is a widely-used and well-validated measure for anxiety screening [@sapraUsingGeneralizedAnxiety]. the GAD-7 is scored on a unidimensional scale summing all 7 items, with cutoffs that can also be employed for interpretation of clinical severity: 
+|
+|   Minimal anxiety = 0-4
+|   Mild Anxiety = 5-9
+|   Moderate Anxiety = 10-14
+|   Severe Anxiety = 15-21. 
+|
+| A score of 10 points or higher indicates probably anxiety disorder, with 89% sensitivity and 82% specificity for GAD.
 
 **Scoresheet**
 
-To clean the data, the scoresheet:
+Data Cleaning includes: 
 
-1) selects only the variables that are relevant for the current measure
+**1-2** Selecting only the variables that are relevant for the current measure and recoding raw variables to make them consistent with the way of scoring: not at all = 0, several days =1, over half the days = 2, nearly every day =3
 
-2) recode raw variables to make them consistent with the way of scoring: not at all =0, several days =1, over half the days =2, nearly every day =3
+**3-5** creation an additional variable based on sum scores reflecting the participant's anxiety levels
 
-3) creates an additional variable based on sum scores reflecting the participant's anxiety levels
-
-4) select only a few columns that will go into the final dataset
+**6** creating a dichotomized measure of likely anxiety (cutoff score of 10 or greater), along with clinical severity index (minimal, mild, moderate, severe)
 
 **Key variables**
 
 `gad_sum_25` (Sum of GAD-7, 25% or less items missing and weighted by N items completed)
 
+`gad_cutoffs` (GAD-7 with anxiety severity cutoffs employed)
+
+`gad_anx_disorder` (GAD-7 probable anxiety disorder Yes/No)
+
 
 ## Goldfarb Fear of Fat Scale
-The Goldfarb Fear of Fat Scale (GFFS) which was introduced in 1985 as a diagnostic tool to measure one's fear of fat as it can be an indicator for the development of an eating disorder (Goldfarb et al., 1985). When used as a screening tool for both clinical and non-clinical groups, GFFS has strong test-retest reliability and psychometric properties (Pryzbyla-Basista et al., 2022). In addition, the test also has shown high validity for both populations with and without eating disorders (Goldfarb, 2010). GFFS uses a 4-point scale with 1 being equal to very untrue and 4 being equal to very true, and a 1-factor solution has been supported for scoring. 
 
-[The Goldfarb Fear of Fat Scale](https://pubmed.ncbi.nlm.nih.gov/3861845/)
-[An examination of the factor structure of the Goldfarb Fear of Fat Scale in clinical and non-clinical samples of Polish women](https://www.sciencedirect.com/science/article/pii/S1740144521001467)
-[Measures for Clinical Practice and Research: A Sourcebook, 4th edition](https://www.magiworld.org/Journal/2010/1008_Measures.pdf)
+The Goldfarb Fear of Fat Scale (GFFS) is a 10-item scale which was introduced in 1985 as a diagnostic tool to measure one's fear of fat as it can be an indicator for the development of an eating disorder [@goldfarbGoldfarbFearFat1985]. When used as a screening tool for both clinical and non-clinical groups, GFFS has strong test-retest reliability and psychometric properties [@przybyta-basistaExaminationFactorStructure2022]. In addition, the test also has shown high validity for both populations with and without eating disorders (Goldfarb, 2010) While original factor structure is defined as a single-factor, @przybyta-basistaExaminationFactorStructure2022 also supported a two-factor structure in a non-clinical sample: (1) fear of weight gain and (2) fear of losing control over eating/weight. GFFS uses a 4-point scale with 1 being equal to very untrue and 4 being equal to very true
 
 **Scoring**
-The scoresheet outlines the following steps to clean the data: 
 
-1. Select raw variables being used
+Data Cleaning includes: 
 
-2. Rename variables to include numbering for order of questions in the scale and recode labels scale to begin at 0 instead of 1 with very untrue being equal to 0 and very true being equal to 3. 
+**1-2.** Select and rename variables; recode labels scale to begin at 0 instead of 1 with very untrue being equal to 0 and very true being equal to 3. 
 
-3. Sum the total scores and rename this summary as `gffs_sum`
+**3-4.** Sum the total scores and create a variable to reflect only those completing > 75% of items. Also create two subscales (FOWG and Fear of LOC) for alternative scoring. 
 
-4. Select only new variables
-
-5. Create a score that is the weighted sum for those who completed at least 75% of items
-
-**Scoring Note** Our GFFS scoring procedure re-scales the item scores to be 0-3 instead of 1-4, meaning that sum scores are scaled 0-21 instead of 7-28. To compare our means to other studies using the GFFS, add 7 to the sum score.
+|**Scoring Note** Our GFFS scoring procedure re-scales the item scores to be 0-3 instead of 1-4, meaning that sum scores are scaled 0-21 instead of 7-28. To compare our means to other studies using the GFFS, add 7 to the sum score.
 
 **Key Variables**
- 
-`gffs_1_fear_fat` (assesses if biggest fear is becoming fat)
-`gffs_2_fear_little_gain` (assesses fear of minor weight gain)
-`gffs_3_overweight_risk` (assesses fear of becoming overweight)
-`gffs_4_cannot_live` (assesses opinions of how overweight people can live)
-`gffs_5_fat_worst` (assesses if becoming fat is worst outcome)
-`gffs_6_concentrate` (assesses if concentration on weight control prevents becoming fat)
-`gffs_7_painful_thought` (assesses if thoughts of weight gain being fearful can be controlled)
-`gffs_8_energy_control_weight` (assesses energy that goes towards weight control)
-`gffs_9_eat_lose_control` (assesses fear of losing control when eating)
-`gffs_10_stay_hungry` (assesses if staying hungry is meant to prevent becoming fat)
-`gffs_sum_complete` (sum of answers for the previous 10 variables)
-`gffs_sum_25` (weighted sum of gffs for all individuals with < 25% missing items)
 
+For variables below, _25 appendix reflects that individuals with <25% missing items on a scale were included with weighted sums based on number of items completed
+
+`gffs_sum_25` (sum of all items)
+
+`gffs_fowg_25` (sum of fear of weight gain subscale)
+
+`gffs_loc_25` (sum of loss of control items)
 
 ## Ideal Body Stereotype Scale - Revised
 
@@ -241,25 +289,17 @@ This companion file is for the Ideal Body Stereotype Scale, which is designed to
 
 Reference 1: ["A prospective test of the dual-pathway model of bulimic pathology: Mediting effects of dieting and negative affect.Journal of Abnormal Psychology"] (http://www.ori.org/files/Static%20Page%20Files/Stice01.pdf)
 
-**Scoresheet**
+**Scoring**
 
-In order to clean the data:
+Scoring includes:
 
-(1) Selects raw variables being used for the current measure
+**1.** Selecting and renaming variables.
 
-(2) Renames variables to be easily identified
-
-(3) Calculate the mean scores and rename this as idss_mean
+**2.** Creating a mean score from all 6 IBSS items
 
 **Key Variables**
 
-"idss_slender", 
-"idss_in_shape", 
-"idss_tall", 
-"idss_lean",
-"idss_shapely", 
-"idss_long_legs", 
-"ideal_body_stereotype_scale_revised_complete"
+`ibss_mean` (Mean of all IBSS items)
 
 ## Positive and Negative Affect Schedule (PANAS)
 
@@ -271,23 +311,25 @@ This companion file is for the Positive and Negative Affect Schedule (PANAS) whi
 [The Positive and Negative Affect Schedule](https://ogg.osu.edu/media/documents/MB%20Stream/PANAS.pdf)
 ##
 
-**Scoresheet**
+**Scoring**
 
-In order to clean the data:
+Scoring includes: 
 
-- Select raw variables being used
+**1.** Selecting and renaming variables
 
-- Rename variables to include panas and numbering for order of questions in the scale 
+**2.** Compute subscale sum scores: 
 
-- Sum the total scores of questions 1, 3, 5, 8, 9, 11, 13, 15, 16, 18 and rename as `panas_positive_sum`
+- Sum the total scores of questions 1, 3, 5, 8, 9, 11, 13, 15, 16, 18  as `panas_positive_sum`
 
-- Sum the total scores of questions 2, 4, 6, 7, 10, 12, 14, 17, 19 and rename as `panas_negative_sum`
+- Sum the total scores of questions 2, 4, 6, 7, 10, 12, 14, 17, 19 as `panas_negative_sum`
 
 **Key Variables**
- 
-`panas_positive_sum` (sum of scores for questions identifying positive affect over the course of the last week)
-`panas_negative_sum` (sum of scores for questions identifying negative affect over the course of the last week)
 
+Sum scores below reflect weighted sums with 25% or less missing data: 
+ 
+`panas_positive_sum_25` (sum of scores for questions identifying positive affect over the course of the last week)
+
+`panas_negative_sum_25` (sum of scores for questions identifying negative affect over the course of the last week)
 
 ## PHQ-9
 
@@ -333,12 +375,17 @@ In order to clean the data:
 - Generate the average score of internalization of thin/low Body Fat, internalization of muscular/athletic, pressures - family, pressures - peers, and pressures - media. 
 
 **Key Variables**
- 
+
 `sataq_average`	(average of SATAQ)
+
 `sataq_thin_ideal`	(average of internalization of the thin ideal)
+
 `sataq_athletic_ideal`	(average of internalization of athletic ideal)
+
 `sataq_parental_pressure`	(average of parental pressure)
+
 `sataq_peer_pressure`	(average of peer pressure)
+
 `sataq_media_pressure`	(average of media pressure)
 
 ## Traditional Masculinity-Femininity Scale
@@ -370,33 +417,38 @@ This companion file is for the Universal Measure of Bias - Fat (UMB-Fat) which w
 [Weighing obesity stigma: the relative strength of different forms of bias ](https://pubmed.ncbi.nlm.nih.gov/18414421/)
 [UMB-FAT](https://www.researchgate.net/publication/262414384_UMB-FAT)
 
-**Scoresheet**
+**Scoring**
 
-In order to clean the data:
+Data cleaning includes:
 
-- Select raw variables being used
+**1.** Selecting and renaming variables to include descriptors of questions asked in the scale 
 
-- Rename variables to include descriptors of questions asked in the scale 
+**2.** Reverse coding questions 5, 7, 8, 9, 12, 15, 16, and 19 so that higher scores indicate greater stigma
 
-- Reverse code questions 5, 7, 8, 9, 12, 15, 16, and 19 so that higher scores indicate greater stigma
+**3.** Creation of subscale scores: 
 
-- Sum the total scores of questions 5, 7, 12 ,15 , 16  and rename as `umb_adverse_judgement_sum`
+- Sum the total scores of questions 5, 7, 12 ,15 , 16  = `umb_adverse_judgement_sum`
 
-- Sum the total scores of questions 2, 8, 17, 19, 20  and rename as `umb_social_distance_sum`
+- Sum the total scores of questions 2, 8, 17, 19, 20  = `umb_social_distance_sum`
 
-- Sum the total scores of questions 3, 4, 6, 9, 10 and rename as `umb_attraction_sum`
+- Sum the total scores of questions 3, 4, 6, 9, 10 = `umb_attraction_sum`
 
-- Sum the total scores of questions 1, 11, 13, 14, 18 and rename as `umb_equal_rights_sum`
+- Sum the total scores of questions 1, 11, 13, 14, 18 = `umb_equal_rights_sum`
 
--Total score with sum of all items as `umb_sum_total`
+- Sum the total score with sum of all items as `umb_sum_total`
 
 
 **Key Variables**
+
+ All variables below reflect the final scoring of subscale sum scores with < 25% missing data (weighted sums used for those with any missing data).
  
-`umb_adverse_judgement_sum_25` (sum of scores for questions identifying bias in the form of adverse judgement against fat people - 25% or less missing)
-`umb_social_distance_sum_25` (sum of scores for questions identifying bias in the form of social distance from fat people - 25% or less missing)
-`umb_attraction_sum_25` (sum of scores for questions identifying bias in the form of attraction towards fat people - 25% or less missing)
-`umb_equal_rights_sum_25` (sum of scores for questions identifying bias in the form of opinons of equal rights for fat people - 25% or less missing)
+`umb_adverse_judgement_sum_25` (adverse judgement against fat people)
+
+`umb_social_distance_sum_25` (bias in the form of social distance from fat people)
+
+`umb_attraction_sum_25` (bias in the form of attraction towards fat people)
+
+`umb_equal_rights_sum_25` (bias in the form of opinons of equal rights for fat people)
+
 `umb_sum_total_25` (sum of total umb-FAT scores - 25% or less missing)
 
-## Weight and Dieting History Questionnaire
