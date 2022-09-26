@@ -72,7 +72,7 @@ Demographics are primarily drawn from the data collection form (measure prefix '
 
 `assessment_month` (assessment recoded to assessment month and year)
 
-## Dieting and Weight History Questionnaire
+## Dieting and Weight History Questionnaire (DWHQ)
 
 The Dieting and Weight History Questionnaire (DWHQ), was developed by @wittAssessingThreeTypes2013 to measure three dimensions of dieting: (1) frequency of past dieting and overeating (i.e. history of dieting), (2) current dieting to lose weight, and (3) weight suppression, or the difference between an individual’s current weight and his or her highest previous weight.  
 
@@ -80,8 +80,8 @@ The Dieting and Weight History Questionnaire (DWHQ), was developed by @wittAsses
 
 **Key Variables**
 
-## ED History Questionnaire
-The Eating Disorder History Questionnaire was developed by the EMBARK Lab for the current project to assess eating disorder history in the sample. It was used in baseline assessment for the current project prior to September, 2022, at which point the ED100k was substituted as it has previously been validated for this purpose. The Eating Disorder History Questionnaire follows diagnostic algorithmic scoring to assess (via self-report) for history of Anorexia Nervosa, Atypical Anorexia Nervosa, Bulimia Nervosa, Binge Eating Disorder, and Subclinical Eating Pathology. 
+## ED History Questionnaire (EDHQ)
+The Eating Disorder History Questionnaire was developed by the EMBARK Lab for the current project to assess eating disorder history in the sample. It was used in baseline assessment for the current project prior to September, 2022, at which point the ED100k was substituted as it has been supported through initial validation for this purpose. The Eating Disorder History Questionnaire follows diagnostic algorithmic scoring to assess (via self-report) for history of eating disorder behaviors along with DSM-5 Anorexia Nervosa, Atypical Anorexia Nervosa, Bulimia Nervosa, Binge Eating Disorder, and Subclinical Eating Pathology. 
 
 **Scoring**
 
@@ -229,9 +229,9 @@ Data cleaning includes:
 
 `fssm_average_freq_complete` (average of scores measuring how many days were impacted by previous questions with yes no scores regarding previous 28 days of access and measures taken because of food insecurity - completers)
 
-## GAD-7
+## Generalized Anxiety Disorder 7-item (GAD-7)
 
-Generalized Anxiety Disorder 7-item (GAD-7) [@spitzerBriefMeasureAssessing2006] is a seven-item instrument that is used to measure or assess the severity of generalised anxiety disorder (GAD). Each item asks the individual to rate the severity of his or her symptoms over the past two weeks. Response options include “not at all”, “several days”, “more than half the days” and “nearly every day”. The GAD-7 is a widely-used and well-validated measure for anxiety screening [@sapraUsingGeneralizedAnxiety]. the GAD-7 is scored on a unidimensional scale summing all 7 items, with cutoffs that can also be employed for interpretation of clinical severity: 
+Generalized Anxiety Disorder 7-item (GAD-7) [@spitzerBriefMeasureAssessing2006] is a seven-item instrument that is used to measure or assess the severity of generalised anxiety disorder (GAD). Each item asks the individual to rate the severity of his or her symptoms over the past two weeks. Response options include “not at all”, “several days”, “more than half the days” and “nearly every day”. The GAD-7 is a widely-used and well-validated measure for anxiety screening [@sapraUsingGeneralizedAnxiety2020]. the GAD-7 is scored on a unidimensional scale summing all 7 items, with cutoffs that can also be employed for interpretation of clinical severity: 
 |
 |   Minimal anxiety = 0-4
 |   Mild Anxiety = 5-9
@@ -283,11 +283,9 @@ For variables below, _25 appendix reflects that individuals with <25% missing it
 
 `gffs_loc_25` (sum of loss of control items)
 
-## Ideal Body Stereotype Scale - Revised
+## Ideal Body Stereotype Scale - Revised (IBSS-R)
 
-This companion file is for the Ideal Body Stereotype Scale, which is designed to measure internalization of the ideal-body stereotype. It was developed as part of a study examining how the dual pathway model of bulimia predicts diagnostic levels of the disorder.The measure is an adapted form of the Ideal-Body Stereotype Scale (Stice et al., 1994). 
-
-Reference 1: ["A prospective test of the dual-pathway model of bulimic pathology: Mediting effects of dieting and negative affect.Journal of Abnormal Psychology"] (http://www.ori.org/files/Static%20Page%20Files/Stice01.pdf)
+The Ideal Body Stereotype Scale - Revised (IBSS-R), is a brief (6-item), unidimensional scale designed to measure internalization of an ideal-body stereotype (specifically for women), developed by @sticeTestDualPathway1996. The IBSS-R has be utilized as a measure of thin-ideal internalization in eating disorder prevention research [@sticeMetaanalyticReviewDissonancebased2019], making it suitable as a benchmark measure for existing effect sizes. 
 
 **Scoring**
 
@@ -299,29 +297,23 @@ Scoring includes:
 
 **Key Variables**
 
-`ibss_mean` (Mean of all IBSS items)
+`ibss_mean_25` (Mean of all IBSS items, 25% or less missing)
 
 ## Positive and Negative Affect Schedule (PANAS)
 
-This companion file is for the Positive and Negative Affect Schedule (PANAS) which was introduced in 1988 as a two-factor scale to measure one's positive and negative moods (Watson et al., 1988). Compared to other scales measuring positive and negative affect, PANAS has high internal consistency and validity (Watson et al., 1988). In addition, the scale also shows consistent reliabiltiy, even when measured across sexes (Crawford et al., 2004). PANAS uses a 5-point likert scale with 1 being equal to very slightly or not at all and 5 being equal to extremely. In terms of scoring, sums of scores are separated for questions regarding positive affect and questions reagrding negative affect. 
+The Positive and Negative Affect Schedule (PANAS) js a 20-item, 2 dimensional measure which was introduced in 1988 to measure one's positive and negative moods [@watsonDevelopmentValidationBrief1988]. Compared to other scales measuring positive and negative affect, PANAS has high internal consistency and validity. In addition, the scale also shows consistent reliability, even when measured across gender [@crawfordPositiveNegativeAffect2004]. The PANAS asks respondents to indicate how they have felt over the previous week using a 5-point likert scale with 1 =  very slightly or not at all and 5 = extremely. The two dimensions include a 10-item positive affect subscale and 10-item negative affect subscale
 
-
-[Development and Validation of Brief Measures of Positive and Negative Affect: The PANAS Scales](https://psycnet.apa.org/fulltext/1988-31508-001.pdf?auth_token=bfee3b8066fabebd06ab79822ba512d821684b31)
-[The Positive and Negative Affect Schedule (PANAS): Construct validity, measurement properties and normative data in a large non-clinical sample](https://bpspsychub.onlinelibrary.wiley.com/doi/pdf/10.1348/0144665031752934)
-[The Positive and Negative Affect Schedule](https://ogg.osu.edu/media/documents/MB%20Stream/PANAS.pdf)
-##
 
 **Scoring**
 
-Scoring includes: 
+Data cleaning includes: 
 
 **1.** Selecting and renaming variables
 
-**2.** Compute subscale sum scores: 
+**2.** Computing subscale sum scores: 
 
-- Sum the total scores of questions 1, 3, 5, 8, 9, 11, 13, 15, 16, 18  as `panas_positive_sum`
-
-- Sum the total scores of questions 2, 4, 6, 7, 10, 12, 14, 17, 19 as `panas_negative_sum`
+|   - Sum the total scores of questions 1, 3, 5, 8, 9, 11, 13, 15, 16, 18  as `panas_positive_sum`
+|   - Sum the total scores of questions 2, 4, 6, 7, 10, 12, 14, 17, 19 as `panas_negative_sum`
 
 **Key Variables**
 
@@ -331,91 +323,81 @@ Sum scores below reflect weighted sums with 25% or less missing data:
 
 `panas_negative_sum_25` (sum of scores for questions identifying negative affect over the course of the last week)
 
-## PHQ-9
+## Patient Health Questionnnaire -9 (PHQ-9)
 
-The 9-question Patient Health Questionnaire is a diagnostic tool introduced in 2001 to screen adult patients in a primary care setting for the presence and severity of depression. It rates depression based on the self-administered Patient Health Questionnaire.
-
-
-Reference 1: [Anxiety Sensitivity, Anxiety Frequency, and the Prediction of Fearfulness](https://github.com/jjcurtin/arc_measures/raw/main/ASI/ReissS1986a.pdf)
-Reference 2: [Robust Dimensions of Anxiety Sensitivty: Development and Initial Validation of the Anxiety Sensitivity Index-3](https://github.com/jjcurtin/arc_measures/raw/main/ASI3/TaylorS2007b.pdf)
+The 9-question Patient Health Questionnaire is a diagnostic tool introduced in 2001 to screen adult patients in a primary care setting for the presence and severity of depression [@kroenkePHQ9ValidityBrief2001, @kroenkePHQ9NewDepression2002]. A PHQ-9 score > or =10 had a sensitivity of 88% and a specificity of 88% for major depression. PHQ-9 scores of 5, 10, 15, and 20 represented mild, moderate, moderately severe, and severe depression, respectively.
 
 **Scoresheet**
 
-In order to clean the data:
+Cleaning steps include: 
 
-(1) Selects raw variables being used for the current measure
+**1-2.** Selecting raw variables being used for the current measure; recode labels scale to begin at 0 instead of 1 with "not at all" = 0, and "nearly every day" = 4
 
-(2) Recode labels scale to begin at 0 instead of 1 with "not at all" = 0, and "nearly every day" = 4
+**3.** Sum the total scores
 
-(3) Sum the total scores and rename this summary as phq_sum
-
+**4.** Create severity index and 'probable depression' diagnostic cutoff 
 
 **Key Variables**
 
-`phq_sum` (represents total score of the PHQ-9)
+`phq_sum_25` (represents total score of the PHQ-9; weighted sum 25% or less missing items)
 
+`phq_dep_severity` (severity index of minimal, mild, moderate, moderately severe, and severe depression)
 
-## Sociocultural Attitudes Towards Appearance Questionnaire
+`phq_dep_probable` (Probable depression yes/no based on score of 10 or greater)
 
-This companion file is for the Sociocultural Attitudes Towards Appearance Questionnaire-4 (SATAQ) which measures designed to assess societal and interpersonal aspects of appearance ideals.(Schaefer, Lauren M et al., 2015) This experiment design has assess to an extensive evaluation among samples, which works very well. 
+## Sociocultural Attitudes Towards Appearance Questionnaire (SATAQ)
 
-
-Schaefer, Lauren M et al. “Development and validation of the Sociocultural Attitudes Towards Appearance Questionnaire-4 (SATAQ-4).” Psychological assessment vol. 27,1 (2015): 54-67. doi:10.1037/a0037917
+The Sociocultural Attitudes Towards Appearance Questionnaire-4 (SATAQ) is designed to assess societal and interpersonal aspects of appearance ideals. The SATAQ has five validated factors:  Internalization of Thin/Low Body Fat, Internalization of Muscular/Athletic, Pressures from Family, Pressures from Media, and Pressures from Peers. This scale structure was confirmed in 3 independent and geographically diverse samples of women from the United States (East Coast N = 440, West Coast N = 304, and North/Midwest N = 349). SATAQ-4 scale scores demonstrated excellent reliability and good convergent validity with measures of body image, eating disturbance, and self-esteem. The measure was also validated in college males from the United States (N = 271); however, there was some evidence of an underlying structure unique to men. For the purposes of the current data, the 5-factor structure is employed in scoring.
 
 **Scoresheet**
 
-In order to clean the data:
+Cleaning Steps include: 
 
-- Select raw variables being used
+**1-3.** Selecting raw variables being used and renaming variables to include numbering for order of questions in the scale; recoding labels scale to begin at 0
 
-- Rename variables to include numbering for order of questions in the scale
+**4.** Generate total score and subscale scores: 
 
-- Recode labels scale to begin at 0
-
-- Generate the average score of internalization of thin/low Body Fat, internalization of muscular/athletic, pressures - family, pressures - peers, and pressures - media. 
+|   Internalization of thinness/low Body Fat: 
+|   Internalization of muscular/athletic:
+|   Pressures - family:
+|   Pressures - peers:
+|   Pressures - media:
 
 **Key Variables**
 
-`sataq_average`	(average of SATAQ)
+Variables with the _25 appendix indicate that these variables include those with 25% or less missing data
 
-`sataq_thin_ideal`	(average of internalization of the thin ideal)
+`sataq_mean_25`	(mean of SATAQ)
 
-`sataq_athletic_ideal`	(average of internalization of athletic ideal)
+`sataq_thin_ideal_25`	(mean of internalization of the thin ideal)
 
-`sataq_parental_pressure`	(average of parental pressure)
+`sataq_athletic_ideal_25`	(mean of internalization of athletic ideal)
 
-`sataq_peer_pressure`	(average of peer pressure)
+`sataq_parental_pressure_25`	(mean of parental pressure)
 
-`sataq_media_pressure`	(average of media pressure)
+`sataq_peer_pressure_25`	(mean of peer pressure)
 
-## Traditional Masculinity-Femininity Scale
-This companion file is for the Traditional Masculinity-Femininity Scale (TMFS) which was introduced in 2016 to assess self-ascribed masculinity and femininity (Kachel et al., 2016). TMFS has demonstrated high reliability for both sexes (Kachel et al., 2016). Additionally, TMFS shows validity due to its ability to reduce issues of social desirability when given as a self-assessment (Kachel et al., 2016). TMFS uses a 7-point likert scale with 1 being equal to totally masculine and 7 being equal to totally feminine. In terms of scoring, the mean is taken of all given answers with an average less than 4 implying masculinity and an average greater than 4 implying femininity.
+`sataq_media_pressure_25`	(mean of media pressure)
 
+## Traditional Masculinity-Femininity Scale (TMFS)
 
-[Traditional Masculinity and Femininity: Validation of a New Scale Assessing Gender Roles ](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4932111/)
+The Traditional Masculinity-Femininity Scale (TMFS) which was introduced in 2016 to assess self-ascribed masculinity and femininity [@kachelTraditionalMasculinityFemininity2016]. The TMFS has demonstrated high reliability for both sexes. Additionally, TMFS shows validity due to its ability to reduce issues of social desirability when given as a self-assessment. TMFS uses a 7-point likert scale with 1 being equal to totally masculine and 7 being equal to totally feminine. In terms of scoring, the mean is taken of all given answers with an average less than 4 implying masculinity and an average greater than 4 implying femininity.
 
 **Scoresheet**
 
-In order to clean the data:
+Data cleaning steps include:
 
-- Select raw variables being used
+**1-2** selecting and renaming variables to include numbering of questions in the scale
 
-- Rename variables to include numbering of questions in the scale
-
-- Average the total scores and rename as `tmfs_mean`
+**3-4.** Taking the mean total score and rename as `tmfs_mean`. Create mean variable with 25% or less missing data.
 
 **Key Variables**
 
-`tmfs_mean` (average of scores in response to questions asking about different situations where one could consider their femininity and masculinity)
+`tmfs_mean_25` (average of scores in response to questions asking about different situations where one could consider their femininity and masculinity. 25% or less missing data)
 
-## Universal Measure of Bias - Fat
+## Universal Measure of Bias - Fat (UMB-fat)
 
-This companion file is for the Universal Measure of Bias - Fat (UMB-Fat) which was introduced in 2008 to assess weight bias and demonstrates strong psychometric properties when utilized as an assessment (Durso et al., 2008). It has been compared alongside two other scales measuring universal bias against 'gay' or 'Muslim' individuals and demonstrates high internal consistency and construct validity (Latner et al., 2008). UMB-Fat uses a 7-point likert scale with 1 being equal to strongly agree and 7 being equal to strongly disagree. In terms of scoring, sums of scores are separated amongst four categories of bias: adverse judgement, social distance, attraction, and equal rights. 
-
-
-[Understanding self-directed stigma: development of the weight bias internalization scale ](https://pubmed.ncbi.nlm.nih.gov/18978768/)
-[Weighing obesity stigma: the relative strength of different forms of bias ](https://pubmed.ncbi.nlm.nih.gov/18414421/)
-[UMB-FAT](https://www.researchgate.net/publication/262414384_UMB-FAT)
+This companion file is for the Universal Measure of Bias - Fat (UMB-Fat) which was introduced in 2008 to assess weight bias and demonstrates strong psychometric properties when utilized as an assessment [@dursoUnderstandingSelfdirectedStigma2008]. It has been compared alongside two other scales measuring universal bias against 'gay' or 'Muslim' individuals and demonstrates high internal consistency and construct validity [@latnerWeighingObesityStigma2008]. Further, higher BMI is not associated with any differences in weight bias. The UMB-Fat uses a 7-point likert scale with 1 being equal to strongly agree and 7 being equal to strongly disagree. In terms of scoring, sums of scores are separated amongst four categories of bias: adverse judgement, social distance, attraction, and equal rights. 
 
 **Scoring**
 
