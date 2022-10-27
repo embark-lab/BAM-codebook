@@ -1,6 +1,6 @@
 # Self-Report Measures
 
-## Childhood Trauma Questionnaire
+## Childhood Trauma Questionnaire (CTQ)
 The Childhood Trauma Questionnaire (CTQ) is a standardized self-report inventory that measures the severity of childhood trauma and participants’ tendency to underreport maltreatment, and has been validated in both clinical and non-clinical populations [@bernsteinValidityChildhoodTrauma1997; @villanoPsychometricUtilityChildhood2004]. The CTQ is a retrospective 28-item self-report inventory that measures the severity of different types of childhood trauma, producing five clinical subscales each comprised of five items: Emotional Abuse, Physical Abuse, Sexual Abuse, Emotional Neglect, Physical Neglect. The measure also includes a three-item Minimization/Denial scale indicating the potential underreporting of maltreatment. Participants respond to each item in the context of “when you were growing up” and answer according to a five-point Likert scale ranging from “never” = 1 to “very often” = 5, producing scores of 5 to 25 for each trauma subscale. The three items comprising the Minimization/Denial scale are dichotomized (“never” = 0, all other responses = 1) and summed; a total of one (1) or greater suggests the possible underreporting of maltreatment (false negatives).
 
 **Scoring**
@@ -38,13 +38,11 @@ Demographics captured in the current study include: Race, Sexual Orientation, Ge
 
 Demographics are primarily drawn from the data collection form (measure prefix 'dcf'). Cleaning steps include:
 
-1. Selection of variables that are part of the data collection form (prefix 'dcf') and winnow variables to be included in the master dataset. 
+**1.** Selection of variables that are part of the data collection form (prefix 'dcf') and winnow variables to be included in the master dataset. 
 
-2. Calculation of age in years and remove birthdate (HIPPA Identifier) from the data set. 
+**2-3.** Removal of HIPPA Identifiers - Calculation of age in years and remove birthdate; Changing assessment date to only capture month and year of assessment for further de-identification.
 
-3. Changing assessment date to only capture month and year of assessment for further de-identification.
-
-4. Binning categorical variables to response options most appropriate for race and ethnicity
+**4.** Binning categorical variables to response options most appropriate for race and ethnicity
 
 **Key Variables**
 
@@ -66,7 +64,7 @@ Demographics are primarily drawn from the data collection form (measure prefix '
 
 `gender_TNB` (Participant gender identity recoded to: Cisgender [0] or Trans/Nonbinary [1])
 
-`gender_female_nb` (Participant gender identity coded to Male = 0 and Female/Nonbinary = 1)
+`gender_female_nb` (Participant gender identity coded to Male [0] and Female/Nonbinary = [1])
 
 `sex_gender_minority` (Participant sexual and gender identity coded to CisHet [0] or Sexual/Gender Minority [1])
 
@@ -80,15 +78,13 @@ The Dieting and Weight History Questionnaire (DWHQ), was developed by @wittAsses
 
 **Key Variables**
 
-## ED History Questionnaire (EDHQ)
-The Eating Disorder History Questionnaire was developed by the EMBARK Lab for the current project to assess eating disorder history in the sample. It was used in baseline assessment for the current project prior to September, 2022, at which point the ED100k was substituted as it has been supported through initial validation for this purpose. The Eating Disorder History Questionnaire follows diagnostic algorithmic scoring to assess (via self-report) for history of eating disorder behaviors along with DSM-5 Anorexia Nervosa, Atypical Anorexia Nervosa, Bulimia Nervosa, Binge Eating Disorder, and Subclinical Eating Pathology. 
+## Eating Disorder and Weight History 
 
-**Scoring**
+Eating Disorder History was assessed via a combination of the ED100k.V3 along with additional items assessing eating disorder and weight history. Dieting abd Weight history items were primarily taken from the Dieting and Weight History Questionnaire. 
 
-**Key Variables**
-
-## ED100k
 ED100K.V3 questionnaire is a self-report, ED assessment based on the Structured Clinical Interview for DSM-5, Eating Disorders[@thorntonAnorexiaNervosaGenetics2018]. Items assess DSM-5 criteria for AN, BN, BED, and other specified feeding and eating disorders (OSFED). The ED100K-V1 was found to be a valid measure of eating disorders and eating disorder behaviors. Positive predictive values for AN Criterion B, Criterion C, and binge eating ranged from 88 to 100% in the validation sample. Among women who had a negative screen, the probability of not having these criteria or behaviors ranged from 72 to 100% in the validation sample. The correlation between questionnaire and interview for lowest illness-related BMI was 0.91. Overall, the questionnaire captures historical: eating disorder diagnosis, eating disorder symptoms, eating disorder course of illness, and diagnostic fluctuation within eating disorder diagnosis.
+
+Additional eating disorder history items were developed by the EMBARK Lab for the current project to capture ED history in this sample. It was used in baseline assessment for the current project prior to September, 2022, at which point the ED100k items were added (and generally supercede ED history items) as it has been supported through initial validation for this purpose. The Eating Disorder History Questionnaire follows diagnostic algorithmic scoring to assess (via self-report) for history of eating disorder behaviors along with DSM-5 Anorexia Nervosa, Atypical Anorexia Nervosa, Bulimia Nervosa, Binge Eating Disorder, and Subclinical Eating Pathology. 
 
 **Scoring**
 
@@ -193,7 +189,7 @@ Data Cleaning includes:
 
 **Key Variables**
 
-`fps_mean` (Mean score of all 14 items)
+`fps_mean_25` (Mean score of all 14 items, < 25% missing)
 
 ## USDA Adult Food Security Survey Module (FSSM)
 
@@ -347,7 +343,7 @@ Cleaning steps include:
 
 ## Sociocultural Attitudes Towards Appearance Questionnaire (SATAQ)
 
-The Sociocultural Attitudes Towards Appearance Questionnaire-4 (SATAQ) is designed to assess societal and interpersonal aspects of appearance ideals. The SATAQ has five validated factors:  Internalization of Thin/Low Body Fat, Internalization of Muscular/Athletic, Pressures from Family, Pressures from Media, and Pressures from Peers. This scale structure was confirmed in 3 independent and geographically diverse samples of women from the United States (East Coast N = 440, West Coast N = 304, and North/Midwest N = 349). SATAQ-4 scale scores demonstrated excellent reliability and good convergent validity with measures of body image, eating disturbance, and self-esteem. The measure was also validated in college males from the United States (N = 271); however, there was some evidence of an underlying structure unique to men. For the purposes of the current data, the 5-factor structure is employed in scoring.
+The Sociocultural Attitudes Towards Appearance Questionnaire-4 (SATAQ) is a 22-item measure designed to assess societal and interpersonal aspects of appearance ideals. The SATAQ has five validated factors:  Internalization of Thin/Low Body Fat, Internalization of Muscular/Athletic, Pressures from Family, Pressures from Media, and Pressures from Peers. This scale structure was confirmed in 3 independent and geographically diverse samples of women from the United States (East Coast N = 440, West Coast N = 304, and North/Midwest N = 349). SATAQ-4 scale scores demonstrated excellent reliability and good convergent validity with measures of body image, eating disturbance, and self-esteem. The measure was also validated in college males from the United States (N = 271); however, there was some evidence of an underlying structure unique to men. For the purposes of the current data, the 5-factor structure is employed in scoring.
 
 **Scoresheet**
 
@@ -357,11 +353,15 @@ Cleaning Steps include:
 
 **4.** Generate total score and subscale scores: 
 
-|   Internalization of thinness/low Body Fat: 
-|   Internalization of muscular/athletic:
-|   Pressures - family:
-|   Pressures - peers:
-|   Pressures - media:
+   - Internalization of thinness/low Body Fat: 3,4,5,8, 9
+   
+   - Internalization of muscular/athletic: 1, 2,6 7, 10
+   
+   - Pressures - family: 11, 12, 13, 14
+   
+   - Pressures - peers: 15,16,17,18
+   
+   - Pressures - media: 19, 20, 21, 22
 
 **Key Variables**
 
